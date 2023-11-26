@@ -1,0 +1,2509 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html dir="ltr" lang="es"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;meta name="theme-color" content="#fff"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0,<br/>
+                                 maximum-scale=1.0, user-scalable=no"&gt; <br/>
+  &lt;title&gt;https&lt;/title&gt; <br/>
+  &lt;style&gt;/* Copyright 2017 The Chromium Authors<br/>
+ * Use of this source code is governed by a BSD-style license that can be<br/>
+ * found in the LICENSE file. */<br/>
+<br/>
+a {<br/>
+  color: var(--link-color);<br/>
+}<br/>
+<br/>
+body {<br/>
+  --background-color: #fff;<br/>
+  --error-code-color: var(--google-gray-700);<br/>
+  --google-blue-100: rgb(210, 227, 252);<br/>
+  --google-blue-300: rgb(138, 180, 248);<br/>
+  --google-blue-600: rgb(26, 115, 232);<br/>
+  --google-blue-700: rgb(25, 103, 210);<br/>
+  --google-gray-100: rgb(241, 243, 244);<br/>
+  --google-gray-300: rgb(218, 220, 224);<br/>
+  --google-gray-500: rgb(154, 160, 166);<br/>
+  --google-gray-50: rgb(248, 249, 250);<br/>
+  --google-gray-600: rgb(128, 134, 139);<br/>
+  --google-gray-700: rgb(95, 99, 104);<br/>
+  --google-gray-800: rgb(60, 64, 67);<br/>
+  --google-gray-900: rgb(32, 33, 36);<br/>
+  --heading-color: var(--google-gray-900);<br/>
+  --link-color: rgb(88, 88, 88);<br/>
+  --popup-container-background-color: rgba(0,0,0,.65);<br/>
+  --primary-button-fill-color-active: var(--google-blue-700);<br/>
+  --primary-button-fill-color: var(--google-blue-600);<br/>
+  --primary-button-text-color: #fff;<br/>
+  --quiet-background-color: rgb(247, 247, 247);<br/>
+  --secondary-button-border-color: var(--google-gray-500);<br/>
+  --secondary-button-fill-color: #fff;<br/>
+  --secondary-button-hover-border-color: var(--google-gray-600);<br/>
+  --secondary-button-hover-fill-color: var(--google-gray-50);<br/>
+  --secondary-button-text-color: var(--google-gray-700);<br/>
+  --small-link-color: var(--google-gray-700);<br/>
+  --text-color: var(--google-gray-700);<br/>
+  --edge-background: var(--edge-grey-background);<br/>
+  --edge-black: #101010;<br/>
+  --edge-focus-color: #838383;<br/>
+  --edge-blue-hover: #0078D4;<br/>
+  --edge-blue-pressed: #1081D7;<br/>
+  --edge-blue-rest: #0070C6;<br/>
+  --edge-blue-selected: #004274;<br/>
+  --edge-border-hover:#949494;<br/>
+  --edge-border-pressed: #ADADAD;<br/>
+  --edge-border-rest: #C5C5C5;<br/>
+  --edge-grey-background: #F6F6F6;<br/>
+  --edge-grey-selected: #C6C6C6;<br/>
+  --edge-light-grey-hover: #F3F3F3;<br/>
+  --edge-light-grey-pressed: #F7F7F7;<br/>
+  --edge-light-grey-rest: #EFEFEF;<br/>
+  --edge-primary-text-color: var(--edge-black);<br/>
+  --edge-secondary-text-color: var(--edge-text-grey-rest);<br/>
+  --edge-text-blue-hover: #0070C6;<br/>
+  --edge-text-blue-rest: #0061AB;<br/>
+  --edge-text-blue-pressed: #1081D7;<br/>
+  --edge-text-grey-rest: #6F6F6F;<br/>
+  --edge-white: #FFFFFF;<br/>
+  --edge-primary-button-focus-shadow: 0 0 0 2px inset #F2F8FD;<br/>
+  --edge-focus-outline: 2px solid var(--edge-focus-color);<br/>
+  background: var(--edge-background);<br/>
+  color: var(--edge-primary-text-color);<br/>
+  word-wrap: break-word;<br/>
+}<br/>
+<br/>
+.nav-wrapper .secondary-button {<br/>
+  background: var(--secondary-button-fill-color);<br/>
+  border: 1px solid var(--secondary-button-border-color);<br/>
+  color: var(--secondary-button-text-color);<br/>
+  float: none;<br/>
+  margin: 0;<br/>
+  padding: 8px 16px;<br/>
+}<br/>
+<br/>
+.hidden {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+html {<br/>
+  -webkit-text-size-adjust: 100%;<br/>
+  font-size: 125%;<br/>
+}<br/>
+<br/>
+.icon {<br/>
+  background-repeat: no-repeat;<br/>
+  background-size: 100%;<br/>
+}<br/>
+<br/>
+@media (prefers-color-scheme: dark) {<br/>
+  body {<br/>
+    --background-color: var(--google-gray-900);<br/>
+    --error-code-color: var(--google-gray-500);<br/>
+    --heading-color: var(--google-gray-500);<br/>
+    --link-color: var(--google-blue-300);<br/>
+    --primary-button-fill-color-active: rgb(129, 162, 208);<br/>
+    --primary-button-fill-color: var(--google-blue-300);<br/>
+    --primary-button-text-color: var(--google-gray-900);<br/>
+    --quiet-background-color: var(--background-color);<br/>
+    --secondary-button-border-color: var(--google-gray-700);<br/>
+    --secondary-button-fill-color: var(--google-gray-900);<br/>
+    --secondary-button-hover-fill-color: rgb(48, 51, 57);<br/>
+    --secondary-button-text-color: var(--google-blue-300);<br/>
+    --small-link-color: var(--google-blue-300);<br/>
+    --text-color: var(--google-gray-500);<br/>
+    --edge-black: #FFFFFF;<br/>
+    --edge-focus-color: #888;<br/>
+    --edge-blue-hover: #0070C6;<br/>
+    --edge-blue-pressed: #0069B9;<br/>
+    --edge-blue-rest: #0078D4;<br/>
+    --edge-blue-selected: #63ACE5;<br/>
+    --edge-border-hover:#909090;<br/>
+    --edge-border-pressed: #787878;<br/>
+    --edge-border-rest: #575757;<br/>
+    --edge-grey-background: #2D2D2D;<br/>
+    --edge-grey-selected: #676767;<br/>
+    --edge-light-grey-hover: #424242;<br/>
+    --edge-light-grey-pressed: #3E3E3E;<br/>
+    --edge-light-grey-rest: #464646;<br/>
+    --edge-text-blue-hover: #429BDF;<br/>
+    --edge-text-blue-rest: #63ACE5;<br/>
+    --edge-text-blue-pressed: #2189DA;<br/>
+    --edge-text-grey-rest: #949494;<br/>
+    --edge-white: #1D1D1D;<br/>
+    --edge-primary-button-focus-shadow: 0 0 0 2px inset #F2F8FD;<br/>
+  }<br/>
+}<br/>
+&lt;/style&gt; <br/>
+  &lt;style&gt;/* Copyright 2014 The Chromium Authors<br/>
+   Copyright (C) Microsoft Corporation. All rights reserved.<br/>
+   Use of this source code is governed by a BSD-style license that can be<br/>
+   found in the LICENSE file. */<br/>
+<br/>
+button {<br/>
+  border: 0;<br/>
+  border-radius: 2px;<br/>
+  box-sizing: border-box;<br/>
+  color: var(--primary-button-text-color);<br/>
+  cursor: pointer;<br/>
+  float: right;<br/>
+  font-size: .875em;<br/>
+  margin: 0;<br/>
+  padding: 8px 16px;<br/>
+  transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  user-select: none;<br/>
+}<br/>
+<br/>
+[dir='rtl'] button {<br/>
+  float: left;<br/>
+}<br/>
+<br/>
+.bad-clock button,<br/>
+.captive-portal button,<br/>
+.https-only button,<br/>
+.insecure-form button,<br/>
+.lookalike-url button,<br/>
+.main-frame-blocked button,<br/>
+.neterror button,<br/>
+.pdf button,<br/>
+.ssl button,<br/>
+.enterprise-block button,<br/>
+.enterprise-warn button,<br/>
+.safe-browsing-billing button {<br/>
+  background: var(--edge-blue-rest);<br/>
+}<br/>
+<br/>
+.bad-clock a,<br/>
+.captive-portal a,<br/>
+.ssl a {<br/>
+  color: var(--edge-text-blue-rest);<br/>
+  text-decoration: none;<br/>
+  border-bottom: 1px solid currentColor;<br/>
+}<br/>
+<br/>
+@media (forced-colors: active) {<br/>
+  .bad-clock a,<br/>
+  .captive-portal a,<br/>
+  .lookalike-url a,<br/>
+  .ssl a {<br/>
+    -ms-high-contrast-adjust: none;<br/>
+    color: LinkText;<br/>
+    border-bottom: 1px solid currentColor;<br/>
+  }<br/>
+  .bad-clock a:focus,<br/>
+  .captive-portal a:focus,<br/>
+  .lookalike-url a:focus,<br/>
+  .ssl a:focus {<br/>
+    outline: none;<br/>
+    border-bottom: 2px solid LinkText;<br/>
+  }<br/>
+}<br/>
+<br/>
+<br/>
+.bad-clock #primary-button,<br/>
+.captive-portal #primary-button,<br/>
+.lookalike-url #primary-button,<br/>
+.ssl #primary-button {<br/>
+  color: white;<br/>
+  background-color: var(--edge-blue-rest);<br/>
+  border: 2px solid var(--edge-blue-rest);<br/>
+  font-family: system-ui, sans-serif;<br/>
+  font-weight: 600;<br/>
+  outline: none;<br/>
+}<br/>
+<br/>
+.bad-clock #primary-button:focus,<br/>
+.captive-portal #primary-button:focus,<br/>
+.lookalike-url #primary-button:focus,<br/>
+.ssl #primary-button:focus {<br/>
+  border-color: var(--edge-focus-color);<br/>
+  box-shadow: var(--edge-primary-button-focus-shadow);<br/>
+}<br/>
+<br/>
+.bad-clock #primary-button:hover,<br/>
+.captive-portal #primary-button:hover,<br/>
+.lookalike-url #primary-button:hover,<br/>
+.ssl #primary-button:hover {<br/>
+  background-color: var(--edge-blue-hover);<br/>
+  border-color: var(--edge-blue-hover);<br/>
+}<br/>
+<br/>
+.bad-clock #primary-button:active,<br/>
+.captive-portal #primary-button:active,<br/>
+.lookalike-url #primary-button:active,<br/>
+.ssl #primary-button:active {<br/>
+  background-color: var(--edge-blue-pressed);<br/>
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),<br/>
+      0 2px 6px 2px rgba(60, 64, 67, .15);<br/>
+}<br/>
+<br/>
+@media(forced-colors: active) {<br/>
+  /* Accent button */<br/>
+  .bad-clock #primary-button,<br/>
+  .captive-portal #primary-button,<br/>
+  .lookalike-url #primary-button,<br/>
+  .ssl #primary-button {<br/>
+    -ms-high-contrast-adjust: none;<br/>
+    background-color: Highlight;<br/>
+    color: HighlightText;<br/>
+    border: 2px solid transparent;<br/>
+  }<br/>
+  .bad-clock #primary-button:focus,<br/>
+  .captive-portal #primary-button:focus,<br/>
+  .lookalike-url #primary-button:focus,<br/>
+  .ssl #primary-button:focus {<br/>
+    outline: 2px solid ButtonText;<br/>
+    border-color: transparent;<br/>
+    box-shadow: none;<br/>
+  }<br/>
+  .bad-clock #primary-button:hover,<br/>
+  .captive-portal #primary-button:hover,<br/>
+  .lookalike-url #primary-button:hover,<br/>
+  .ssl #primary-button:hover {<br/>
+    background-color: HighlightText;<br/>
+    color: Highlight;<br/>
+    border: 2px solid Highlight;<br/>
+  }<br/>
+}<br/>
+<br/>
+.bad-clock #details-button,<br/>
+.captive-portal #details-button,<br/>
+.lookalike-url #proceed-button,<br/>
+.ssl #details-button {<br/>
+  color: var(--edge-primary-text-color);<br/>
+  background-color: transparent;<br/>
+  border-color: var(--edge-border-rest);<br/>
+}<br/>
+<br/>
+.bad-clock #details-button:focus,<br/>
+.captive-portal #details-button:focus,<br/>
+.lookalike-url #proceed-button:focus,<br/>
+.ssl #details-button:focus {<br/>
+  outline: var(--edge-focus-outline);<br/>
+}<br/>
+<br/>
+.bad-clock #details-button:active,<br/>
+.captive-portal #details-button:active,<br/>
+.lookalike-url #proceed-button:active,<br/>
+.ssl #details-button:active {<br/>
+  border-color: white;<br/>
+  background: var(--edge-light-grey-pressed);<br/>
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),<br/>
+      0 2px 6px 2px rgba(60, 64, 67, .15);<br/>
+}<br/>
+<br/>
+.bad-clock #details-button:hover,<br/>
+.captive-portal #details-button:hover,<br/>
+.lookalike-url #proceed-button:hover,<br/>
+.ssl #details-button:hover {<br/>
+  background: var(--edge-light-grey-hover);<br/>
+  border-color: var(--edge-border-hover);<br/>
+  text-decoration: none;<br/>
+}<br/>
+@media(forced-colors: active) {<br/>
+  /* Outline button */<br/>
+  .bad-clock #details-button,<br/>
+  .captive-portal #details-button,<br/>
+  .lookalike-url #proceed-button,<br/>
+  .ssl #details-button {<br/>
+    -ms-high-contrast-adjust: none;<br/>
+    background-color: ButtonFace;<br/>
+    color: ButtonText;<br/>
+    border: 1px solid ButtonText;<br/>
+  }<br/>
+  .bad-clock #details-button:focus,<br/>
+  .captive-portal #details-button:focus,<br/>
+  .lookalike-url #proceed-button:focus,<br/>
+  .ssl #details-button:focus {<br/>
+    outline: 2px solid ButtonText;<br/>
+  }<br/>
+  .bad-clock #details-button:hover,<br/>
+  .captive-portal #details-button:hover,<br/>
+  .lookalike-url #proceed-button:hover,<br/>
+  .ssl #details-button:hover {<br/>
+    background-color: Highlight;<br/>
+    color: HighlightText;<br/>
+  }<br/>
+}<br/>
+<br/>
+.bad-clock #main-message &gt; p,<br/>
+.captive-portal #main-message &gt; p,<br/>
+.lookalike-url #main-message &gt; p,<br/>
+.ssl #main-message &gt; p {<br/>
+  font-size: 14px;<br/>
+  line-height: 20px;<br/>
+  color: var(--edge-primary-text-color);<br/>
+}<br/>
+<br/>
+button:active {<br/>
+  background: var(--primary-button-fill-color-active);<br/>
+  outline: 0;<br/>
+}<br/>
+<br/>
+#debugging {<br/>
+  display: inline;<br/>
+  overflow: auto;<br/>
+}<br/>
+<br/>
+.debugging-content {<br/>
+  line-height: 1em;<br/>
+  margin-bottom: 0;<br/>
+  margin-top: 1em;<br/>
+}<br/>
+<br/>
+.debugging-content-fixed-width {<br/>
+  display: block;<br/>
+  font-family: monospace;<br/>
+  font-size: 1.2em;<br/>
+  margin-top: 0.5em;<br/>
+}<br/>
+<br/>
+.debugging-title {<br/>
+  font-weight: bold;<br/>
+}<br/>
+<br/>
+#details {<br/>
+  margin: 0 0 50px;<br/>
+}<br/>
+<br/>
+#details p:not(:first-of-type) {<br/>
+  margin-top: 20px;<br/>
+}<br/>
+<br/>
+.secondary-button:active {<br/>
+  border-color: white;<br/>
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),<br/>
+      0 2px 6px 2px rgba(60, 64, 67, .15);<br/>
+}<br/>
+<br/>
+.secondary-button:hover {<br/>
+  background: var(--secondary-button-hover-fill-color);<br/>
+  border-color: var(--secondary-button-hover-border-color);<br/>
+  text-decoration: none;<br/>
+}<br/>
+<br/>
+.error-code {<br/>
+  color: var(--error-code-color);<br/>
+  font-size: .8em;<br/>
+  margin-top: 12px;<br/>
+  text-transform: uppercase;<br/>
+}<br/>
+<br/>
+#error-debugging-info {<br/>
+  font-size: 0.8em;<br/>
+}<br/>
+<br/>
+h1 {<br/>
+  color: var(--edge-primary-text-color);<br/>
+  font-size: 1.6em;<br/>
+  font-weight: bold;<br/>
+  line-height: 1.25em;<br/>
+  margin-bottom: 16px;<br/>
+}<br/>
+<br/>
+h2 {<br/>
+  font-size: 1.2em;<br/>
+  font-weight: normal;<br/>
+}<br/>
+<br/>
+.icon {<br/>
+  height: 72px;<br/>
+  margin: 0 0 40px;<br/>
+  width: 72px;<br/>
+}<br/>
+<br/>
+input[type=checkbox] {<br/>
+  opacity: 0;<br/>
+}<br/>
+<br/>
+input[type=checkbox]:focus ~ .checkbox::after {<br/>
+  outline: -webkit-focus-ring-color auto 5px;<br/>
+}<br/>
+<br/>
+.interstitial-wrapper {<br/>
+  box-sizing: border-box;<br/>
+  font-size: 1em;<br/>
+  line-height: 1.6em;<br/>
+  margin: 14vh auto 0;<br/>
+  max-width: 600px;<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+#main-message &gt; p {<br/>
+  display: inline;<br/>
+}<br/>
+<br/>
+#extended-reporting-opt-in {<br/>
+  font-size: .875em;<br/>
+  margin-top: 32px;<br/>
+}<br/>
+<br/>
+#extended-reporting-opt-in label {<br/>
+  display: grid;<br/>
+  grid-template-columns: 1.8em 1fr;<br/>
+  position: relative;<br/>
+}<br/>
+<br/>
+#enhanced-protection-message {<br/>
+  border-radius: 20px;<br/>
+  font-size: 1em;<br/>
+  margin-top: 32px;<br/>
+  padding: 10px 5px;<br/>
+}<br/>
+<br/>
+#enhanced-protection-message a {<br/>
+  color: var(--google-red-10);<br/>
+}<br/>
+<br/>
+#enhanced-protection-message label {<br/>
+  display: grid;<br/>
+  grid-template-columns: 2.5em 1fr;<br/>
+  position: relative;<br/>
+}<br/>
+<br/>
+#enhanced-protection-message div {<br/>
+  margin: 0.5em;<br/>
+}<br/>
+<br/>
+#enhanced-protection-message .icon {<br/>
+  height: 1.5em;<br/>
+  vertical-align: middle;<br/>
+  width: 1.5em;<br/>
+}<br/>
+<br/>
+#https-upgrades-message {<br/>
+  border-radius: 4px;<br/>
+  font-size: 1em;<br/>
+}<br/>
+<br/>
+.nav-wrapper {<br/>
+  margin-top: 51px;<br/>
+}<br/>
+<br/>
+.nav-wrapper::after {<br/>
+  clear: both;<br/>
+  content: '';<br/>
+  display: table;<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+.small-link {<br/>
+  color: var(--small-link-color);<br/>
+  font-size: .875em;<br/>
+}<br/>
+<br/>
+.checkboxes {<br/>
+  flex: 0 0 24px;<br/>
+}<br/>
+<br/>
+.checkbox {<br/>
+  --padding: .9em;<br/>
+  background: transparent;<br/>
+  display: block;<br/>
+  height: 1em;<br/>
+  left: -1em;<br/>
+  padding-inline-start: var(--padding);<br/>
+  position: absolute;<br/>
+  right: 0;<br/>
+  top: -.5em;<br/>
+  width: 1em;<br/>
+}<br/>
+<br/>
+.checkbox::after {<br/>
+  border: 1px solid white;<br/>
+  border-radius: 2px;<br/>
+  content: '';<br/>
+  height: 1em;<br/>
+  left: var(--padding);<br/>
+  position: absolute;<br/>
+  top: var(--padding);<br/>
+  width: 1em;<br/>
+}<br/>
+<br/>
+.checkbox::before {<br/>
+  background: transparent;<br/>
+  border: 2px solid white;<br/>
+  border-inline-end-width: 0;<br/>
+  border-top-width: 0;<br/>
+  content: '';<br/>
+  height: .2em;<br/>
+  left: calc(.3em + var(--padding));<br/>
+  opacity: 0;<br/>
+  position: absolute;<br/>
+  top: calc(.3em  + var(--padding));<br/>
+  transform: rotate(-45deg);<br/>
+  width: .5em;<br/>
+}<br/>
+<br/>
+input[type=checkbox]:checked ~ .checkbox::before {<br/>
+  opacity: 1;<br/>
+}<br/>
+<br/>
+#recurrent-error-message {<br/>
+  background: var(--edge-light-grey-rest);<br/>
+  border-radius: 4px;<br/>
+  margin-bottom: 16px;<br/>
+  margin-top: 12px;<br/>
+  padding: 12px 16px;<br/>
+}<br/>
+<br/>
+.showing-recurrent-error-message #extended-reporting-opt-in {<br/>
+  margin-top: 16px;<br/>
+}<br/>
+<br/>
+.showing-recurrent-error-message #enhanced-protection-message {<br/>
+  margin-top: 16px;<br/>
+}<br/>
+<br/>
+@media (max-width: 700px) {<br/>
+  .interstitial-wrapper {<br/>
+    padding: 0 10%;<br/>
+  }<br/>
+<br/>
+  #error-debugging-info {<br/>
+    overflow: auto;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-width: 420px) {<br/>
+  button,<br/>
+  [dir='rtl'] button,<br/>
+  .small-link {<br/>
+    float: none;<br/>
+    font-size: .825em;<br/>
+    font-weight: 500;<br/>
+    margin: 0;<br/>
+    width: 100%;<br/>
+  }<br/>
+<br/>
+  button {<br/>
+    padding: 16px 24px;<br/>
+  }<br/>
+<br/>
+  #details {<br/>
+    margin: 20px 0 20px 0;<br/>
+  }<br/>
+<br/>
+  #details p:not(:first-of-type) {<br/>
+    margin-top: 10px;<br/>
+  }<br/>
+<br/>
+  .secondary-button:not(.hidden) {<br/>
+    display: block;<br/>
+    margin-top: 20px;<br/>
+    text-align: center;<br/>
+    width: 100%;<br/>
+  }<br/>
+<br/>
+  .interstitial-wrapper {<br/>
+    padding: 0 5%;<br/>
+  }<br/>
+<br/>
+  #extended-reporting-opt-in {<br/>
+    margin-top: 24px;<br/>
+  }<br/>
+<br/>
+  #enhanced-protection-message {<br/>
+    margin-top: 24px;<br/>
+  }<br/>
+<br/>
+  .nav-wrapper {<br/>
+    margin-top: 30px;<br/>
+  }<br/>
+}<br/>
+<br/>
+/**<br/>
+ * Mobile specific styling.<br/>
+ * Navigation buttons are anchored to the bottom of the screen.<br/>
+ * Details message replaces the top content in its own scrollable area.<br/>
+ */<br/>
+<br/>
+@media (max-width: 420px) {<br/>
+  .nav-wrapper .secondary-button {<br/>
+    border: 0;<br/>
+    margin: 16px 0 0;<br/>
+    margin-inline-end: 0;<br/>
+    padding-bottom: 16px;<br/>
+    padding-top: 16px;<br/>
+  }<br/>
+}<br/>
+<br/>
+/* Fixed nav. */<br/>
+@media (min-width: 240px) and (max-width: 420px) and<br/>
+       (min-height: 401px),<br/>
+       (min-width: 421px) and (min-height: 240px) and<br/>
+       (max-height: 560px) {<br/>
+  body .nav-wrapper {<br/>
+    background: var(--edge-grey-background);<br/>
+    bottom: 0;<br/>
+    box-shadow: 0 -22px 40px var(--edge-grey-background);<br/>
+    left: 0;<br/>
+    margin: 0 auto;<br/>
+    max-width: 736px;<br/>
+    padding-inline-end: 24px;<br/>
+    padding-inline-start: 24px;<br/>
+    position: fixed;<br/>
+    right: 0;<br/>
+    width: 100%;<br/>
+    z-index: 2;<br/>
+  }<br/>
+<br/>
+  .interstitial-wrapper {<br/>
+    max-width: 736px;<br/>
+  }<br/>
+<br/>
+  #details,<br/>
+  #main-content {<br/>
+    padding-bottom: 40px;<br/>
+  }<br/>
+<br/>
+  #details {<br/>
+    padding-top: 5.5vh;<br/>
+  }<br/>
+<br/>
+  button.small-link {<br/>
+    color: var(--google-blue-600);<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-width: 420px) and (orientation: portrait),<br/>
+       (max-height: 560px) {<br/>
+  body {<br/>
+    margin: 0 auto;<br/>
+  }<br/>
+<br/>
+  button,<br/>
+  #details-button,<br/>
+  [dir='rtl'] button,<br/>
+  button.small-link {<br/>
+    font-size: .933em;<br/>
+    margin: 6px 0;<br/>
+    transform: translatez(0);<br/>
+  }<br/>
+<br/>
+  .nav-wrapper {<br/>
+    box-sizing: border-box;<br/>
+    padding-bottom: 8px;<br/>
+    width: 100%;<br/>
+  }<br/>
+<br/>
+  #details {<br/>
+    box-sizing: border-box;<br/>
+    height: auto;<br/>
+    margin: 0;<br/>
+    opacity: 1;<br/>
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  }<br/>
+<br/>
+  #details.hidden,<br/>
+  #main-content.hidden {<br/>
+    height: 0;<br/>
+    opacity: 0;<br/>
+    overflow: hidden;<br/>
+    padding-bottom: 0;<br/>
+    transition: none;<br/>
+  }<br/>
+<br/>
+  h1 {<br/>
+    font-size: 1.5em;<br/>
+    margin-bottom: 8px;<br/>
+  }<br/>
+<br/>
+  .icon {<br/>
+    margin-bottom: 5.69vh;<br/>
+  }<br/>
+<br/>
+  .interstitial-wrapper {<br/>
+    box-sizing: border-box;<br/>
+    margin: 7vh auto 12px;<br/>
+    padding: 0 24px;<br/>
+    position: relative;<br/>
+  }<br/>
+<br/>
+  .interstitial-wrapper p {<br/>
+    font-size: .95em;<br/>
+    line-height: 1.61em;<br/>
+    margin-top: 8px;<br/>
+  }<br/>
+<br/>
+  #main-content {<br/>
+    margin: 0;<br/>
+    transition: opacity 100ms cubic-bezier(0.4, 0, 0.2, 1);<br/>
+  }<br/>
+<br/>
+  .small-link {<br/>
+    border: 0;<br/>
+  }<br/>
+<br/>
+  .suggested-left &gt; #control-buttons,<br/>
+  .suggested-right &gt; #control-buttons {<br/>
+    float: none;<br/>
+    margin: 0;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-width: 421px) and (min-height: 500px) and (max-height: 560px) {<br/>
+  .interstitial-wrapper {<br/>
+    margin-top: 10vh;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-height: 400px) and (orientation:portrait) {<br/>
+  .interstitial-wrapper {<br/>
+    margin-bottom: 145px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-height: 299px) {<br/>
+  .nav-wrapper {<br/>
+    padding-bottom: 16px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-height: 560px) and (min-height: 240px) and (orientation:landscape) {<br/>
+  .extended-reporting-has-checkbox #details {<br/>
+    padding-bottom: 80px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-height: 500px) and (max-height: 650px) and (max-width: 414px) and<br/>
+       (orientation: portrait) {<br/>
+  .interstitial-wrapper {<br/>
+    margin-top: 7vh;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-height: 650px) and (max-width: 414px) and (orientation: portrait) {<br/>
+  .interstitial-wrapper {<br/>
+    margin-top: 10vh;<br/>
+  }<br/>
+}<br/>
+<br/>
+/* Small mobile screens. No fixed nav. */<br/>
+@media (max-height: 400px) and (orientation: portrait),<br/>
+       (max-height: 239px) and (orientation: landscape),<br/>
+       (max-width: 419px) and (max-height: 399px) {<br/>
+  .interstitial-wrapper {<br/>
+    display: flex;<br/>
+    flex-direction: column;<br/>
+    margin-bottom: 0;<br/>
+  }<br/>
+<br/>
+  #details {<br/>
+    flex: 1 1 auto;<br/>
+    order: 0;<br/>
+  }<br/>
+<br/>
+  #main-content {<br/>
+    flex: 1 1 auto;<br/>
+    order: 0;<br/>
+  }<br/>
+<br/>
+  .nav-wrapper {<br/>
+    flex: 0 1 auto;<br/>
+    margin-top: 8px;<br/>
+    order: 1;<br/>
+    padding-inline-end: 0;<br/>
+    padding-inline-start: 0;<br/>
+    position: relative;<br/>
+    width: 100%;<br/>
+  }<br/>
+<br/>
+  button,<br/>
+  .nav-wrapper .secondary-button {<br/>
+    padding: 16px 24px;<br/>
+  }<br/>
+<br/>
+  button.small-link {<br/>
+    color: var(--google-blue-600);<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-width: 239px) and (orientation: portrait) {<br/>
+  .nav-wrapper {<br/>
+    padding-inline-end: 0;<br/>
+    padding-inline-start: 0;<br/>
+  }<br/>
+}<br/>
+<br/>
+&lt;/style&gt; <br/>
+  &lt;style&gt;/* Copyright 2013 The Chromium Authors. All rights reserved.<br/>
+ * Use of this source code is governed by a BSD-style license that can be<br/>
+ * found in the LICENSE file. */<br/>
+<br/>
+/* Don't use the main frame div when the error is in a subframe. */<br/>
+body {<br/>
+  background-color: var(--edge-grey-background);<br/>
+}<br/>
+<br/>
+html[subframe] #main-frame-error {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+/* Don't use the subframe error div when the error is in a main frame. */<br/>
+html:not([subframe]) #sub-frame-error {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+#diagnose-button {<br/>
+  float: none;<br/>
+  margin-bottom: 10px;<br/>
+  margin-inline-start: 0;<br/>
+  margin-top: 20px;<br/>
+}<br/>
+<br/>
+h1 {<br/>
+  margin-top: 0;<br/>
+  word-wrap: break-word;<br/>
+  color: var(--edge-primary-text-color);<br/>
+  margin-bottom: 22px;<br/>
+}<br/>
+<br/>
+h1 span {<br/>
+  font-weight: bold;<br/>
+  font-size: 24px;<br/>
+  line-height: 32px;<br/>
+}<br/>
+<br/>
+h2 {<br/>
+  color: var(--edge-secondary-text-color);<br/>
+  font-size: 1.2em;<br/>
+  font-weight: normal;<br/>
+  margin: 10px 0;<br/>
+}<br/>
+<br/>
+a {<br/>
+  color: var(--edge-text-blue-rest);<br/>
+  text-decoration: none;<br/>
+  border-bottom: 1px solid currentColor;<br/>
+}<br/>
+<br/>
+a:hover {<br/>
+  color: var(--edge-text-blue-hover);<br/>
+}<br/>
+<br/>
+a:focus {<br/>
+  outline: none;<br/>
+  text-decoration: none;<br/>
+  border-bottom: var(--edge-focus-outline);<br/>
+}<br/>
+<br/>
+#game-buttons {<br/>
+  display: flex;<br/>
+  align-items: center;<br/>
+}<br/>
+<br/>
+#game-message {<br/>
+  margin-inline-end: 16px;<br/>
+}<br/>
+<br/>
+#game-button {<br/>
+  color: var(--edge-primary-text-color);<br/>
+  background-color: transparent;<br/>
+  border: 1px solid var(--edge-border-rest);<br/>
+}<br/>
+<br/>
+#game-button:disabled {<br/>
+  opacity: 0.3;<br/>
+  cursor: not-allowed;<br/>
+}<br/>
+<br/>
+#game-button:hover:not(:disabled) {<br/>
+  background-color: var(--edge-light-grey-hover);<br/>
+  border-color: var(--edge-border-hover);<br/>
+}<br/>
+<br/>
+#game-button:active:not(:disabled) {<br/>
+  border-color: white;<br/>
+  background: var(--edge-light-grey-pressed);<br/>
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3),<br/>
+    0 2px 6px 2px rgba(60, 64, 67, .15);<br/>
+}<br/>
+<br/>
+#game-button:focus:not(:disabled) {<br/>
+  outline: var(--edge-focus-outline);<br/>
+}<br/>
+<br/>
+@media (forced-colors: active) {<br/>
+  a:hover {<br/>
+    color: HightlightText;<br/>
+  }<br/>
+}<br/>
+<br/>
+.icon {<br/>
+  -webkit-user-select: none;<br/>
+  display: inline-block;<br/>
+}<br/>
+<br/>
+.icon-generic {<br/>
+  /**<br/>
+   * Can't access edge://theme/IDR_ERROR_NETWORK_GENERIC from an untrusted<br/>
+   * renderer process, so embed the resource manually.<br/>
+   */<br/>
+  content: -webkit-image-set(<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAADtJREFUKM9jYBgFRIP///8/wM16wGAhg5fF3ICbVYCfZf8fD4uBgXlAWPx/8LEKmJvxsCiwFxji/3GyANQXWAZOSFkcAAAAAElFTkSuQmCC) 1x,<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAQMAAADdiHD7AAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAFFJREFUSMdjYBgFo2AUjALSwX8weDCwQv+AmP2D/IFBIMRg3zCwQvYNQCGG+gEXAkXSwApBQP2o0CARqv//b8CFgHmF8c9ACw3lePwPAwMoBADzVzSl0RutTQAAAABJRU5ErkJggg==) 2x);<br/>
+}<br/>
+<br/>
+.icon-offline {<br/>
+  content: -webkit-image-set(<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAGxJREFUeF7tyMEJwkAQRuFf5ipMKxYQiJ3Z2nSwrWwBA0+DQZcdxEOueaePp9+dQZFB7GpUcURSVU66yVNFj6LFICatThZB6r/ko/pbRpUgilY0Cbw5sNmb9txGXUKyuH7eV25x39DtJXUNPQGJtWFV+BT/QAAAAABJRU5ErkJggg==) 1x,<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQBAMAAAAVaP+LAAAAGFBMVEUAAABTU1NNTU1TU1NPT09SUlJSUlJTU1O8B7DEAAAAB3RSTlMAoArVKvVgBuEdKgAAAJ1JREFUeF7t1TEOwyAMQNG0Q6/UE+RMXD9d/tC6womIFSL9P+MnAYOXeTIzMzMzMzMzaz8J9Ri6HoITmuHXhISE8nEh9yxDh55aCEUoTGbbQwjqHwIkRAEiIaG0+0AA9VBMaE89Rogeoww936MQrWdBr4GN/z0IAdQ6nQ/FIpRXDwHcA+JIJcQowQAlFUA0MfQpXLlVQfkzR4igS6ENjknm/wiaGhsAAAAASUVORK5CYII=) 2x);<br/>
+  position: relative;<br/>
+}<br/>
+<br/>
+.icon-page-error {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0LjIxIDEzLjVsMS43NjcgMS43NzMtLjcwNC43MDRMMTMuNSAxNC4yMWwtMS43NzMgMS43NzMtLjcwNC0uNzEgMS43NzQtMS43NzQtMS43NzQtMS43NzMuNzA0LS43MDQgMS43NzMgMS43NzQgMS43NzMtMS43NzQuNzA0LjcxMUwxNC4yMSAxMy41ek0yIDE1aDh2MUgxVjBoOC43MUwxNCA0LjI5VjEwaC0xVjVIOVYxSDJ2MTR6bTgtMTFoMi4yOUwxMCAxLjcxVjR6IiBmaWxsPSIjMTAxMDEwIi8+PC9zdmc+);<br/>
+}<br/>
+<br/>
+.icon-thinking {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTMuNSAxMWExLjUwNSAxLjUwNSAwIDAxMS4zODMuOTE0Yy4wNzguMTgyLjExNy4zNzguMTE3LjU4NmExLjUwNSAxLjUwNSAwIDAxLS45MTQgMS4zODNBMS40NzIgMS40NzIgMCAwMTMuNSAxNGExLjUwNSAxLjUwNSAwIDAxLTEuMzgzLS45MTRBMS40NzEgMS40NzEgMCAwMTIgMTIuNWExLjUwNSAxLjUwNSAwIDAxLjkxNC0xLjM4M2MuMTgyLS4wNzguMzc4LS4xMTcuNTg2LS4xMTd6bTAgMmEuNDguNDggMCAwMC4zNTItLjE0OEEuNDguNDggMCAwMDQgMTIuNWEuNDguNDggMCAwMC0uMTQ4LS4zNTJBLjQ4LjQ4IDAgMDAzLjUgMTJhLjQ4LjQ4IDAgMDAtLjM1Mi4xNDhBLjQ4LjQ4IDAgMDAzIDEyLjVjMCAuMTM1LjA1LjI1My4xNDguMzUyQS40OC40OCAwIDAwMy41IDEzek0xIDE0YS45NDEuOTQxIDAgMDEuNzAzLjI5N0EuOTQxLjk0MSAwIDAxMiAxNWEuOTcuOTcgMCAwMS0uMDc4LjM5IDEuMDMgMS4wMyAwIDAxLS41MzEuNTMyQS45NjkuOTY5IDAgMDExIDE2YS45NjkuOTY5IDAgMDEtLjM5LS4wNzggMS4xMDMgMS4xMDMgMCAwMS0uMzItLjIxMSAxLjEwMyAxLjEwMyAwIDAxLS4yMTItLjMyQS45NjkuOTY5IDAgMDEwIDE1YS45NjkuOTY5IDAgMDEuMjktLjcwM0EuOTY5Ljk2OSAwIDAxMSAxNHpNMTEuNSAxYy42MiAwIDEuMjAzLjEyIDEuNzUuMzZhNC41MTUgNC41MTUgMCAwMTEuNDMuOTZjLjQwNi40MDcuNzI2Ljg4My45NiAxLjQzLjI0LjU0Ny4zNiAxLjEzLjM2IDEuNzUgMCAuNjItLjEyIDEuMjAzLS4zNiAxLjc1YTQuNTE2IDQuNTE2IDAgMDEtMi4zOSAyLjM5OEE0LjM5NSA0LjM5NSAwIDAxMTEuNSAxMGgtLjE4YTQuNDUyIDQuNDUyIDAgMDEtMi44MiAxYy0uMzggMC0uNzUtLjA0NC0xLjExLS4xMzNhNC43MzggNC43MzggMCAwMS0xLjAxNS0uMzk4IDQuNzM4IDQuNzM4IDAgMDEtLjg5LS42MjVBNC45MjQgNC45MjQgMCAwMTQuNzU3IDlINC41YTMuNDUgMy40NSAwIDAxLTEuMzY3LS4yNzMgMy41MzcgMy41MzcgMCAwMS0xLjg2LTEuODZBMy40NDYgMy40NDYgMCAwMTEgNS41YTMuNTEzIDMuNTEzIDAgMDEyLjEzMy0zLjIyN0EzLjQ0NiAzLjQ0NiAwIDAxNC41IDJoLjU0Yy4xNzYtLjMwNy4zOS0uNTgzLjY0LS44MjhBMy45NyAzLjk3IDAgMDE4LjUgMGMuNDkgMCAuOTYuMDg2IDEuNDE0LjI1OC40NTguMTcyLjg2Ny40MiAxLjIyNy43NDJoLjM1OXptMCA4YTMuMzkgMy4zOSAwIDAwMS4zNi0uMjczIDMuNTk2IDMuNTk2IDAgMDAxLjEwOS0uNzVBMy41MzIgMy41MzIgMCAwMDE1IDUuNWEzLjMxIDMuMzEgMCAwMC0uMjgxLTEuMzYgMy40MjIgMy40MjIgMCAwMC0uNzUtMS4xMDkgMy40MjMgMy40MjMgMCAwMC0xLjExLS43NUEzLjMxIDMuMzEgMCAwMDExLjUgMmgtLjc1OGEzLjk3NiAzLjk3NiAwIDAwLTEuMDIzLS43MzRDOS4zNjkgMS4wODkgOC45NjQgMSA4LjUgMWEyLjkgMi45IDAgMDAtLjk0NS4xNDhjLS4yODcuMDk0LS41NDcuMjMtLjc4Mi40MDdhMy4zMSAzLjMxIDAgMDAtLjYzMi42MzNBNC43ODUgNC43ODUgMCAwMDUuNjU2IDNINC41YTIuNTM1IDIuNTM1IDAgMDAtMS43NzMuNzQyIDIuNTA3IDIuNTA3IDAgMDAtLjUzMi43OWMtLjEzLjMtLjE5NS42MjMtLjE5NS45NjhzLjA2NS42Ny4xOTUuOTc3Yy4xMy4zMDIuMzA4LjU2Ny41MzIuNzk2LjIyOS4yMjQuNDk0LjQwMS43OTYuNTMyLjMwOC4xMy42MzMuMTk1Ljk3Ny4xOTVoLjgyOGMuMTYyLjMwMi4zNTIuNTc4LjU3LjgyOC4yMi4yNDUuNDY0LjQ1Ni43MzUuNjMzQTMuNDM2IDMuNDM2IDAgMDA4LjUgMTBhMy4zOSAzLjM5IDAgMDAxLjMyLS4yNTljLjQxMi0uMTc3Ljc5LS40MjQgMS4xMzMtLjc0MmguNTQ3eiIgZmlsbD0iIzEwMTAxMCIvPjwvc3ZnPg==);<br/>
+}<br/>
+<br/>
+.icon-blocked {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyLjUgOWEzLjUxMyAzLjUxMyAwIDAxMi40NzcgMS4wMjMgMy41MTMgMy41MTMgMCAwMS43NSAzLjg0NCAzLjUxMyAzLjUxMyAwIDAxLTQuNTk0IDEuODYgMy41MzcgMy41MzcgMCAwMS0xLjg2LTEuODZBMy40NDYgMy40NDYgMCAwMTkgMTIuNWEzLjUxMyAzLjUxMyAwIDAxMi4xMzMtMy4yMjdBMy40NDYgMy40NDYgMCAwMTEyLjUgOXpNMTAgMTIuNWMwIC4zNDQuMDY1LjY3LjE5NS45NzcuMTMuMzAyLjMwOC41NjcuNTMyLjc5Ni4yMjkuMjI0LjQ5NC40MDIuNzk2LjUzMmEyLjU3OCAyLjU3OCAwIDAwMS42OTUuMDk0Yy4yMzUtLjA3My40NTQtLjE3OC42NTctLjMxM2wtMy40Ni0zLjQ2MWMtLjEzNi4yMDMtLjI0LjQyMi0uMzEzLjY1NkEyLjU3OCAyLjU3OCAwIDAwMTAgMTIuNXptNC41ODYgMS4zNzVjLjEzNS0uMjAzLjIzNy0uNDIyLjMwNS0uNjU2YTIuNDA3IDIuNDA3IDAgMDAtLjA5NC0xLjY4OCAyLjQ0MyAyLjQ0MyAwIDAwLS41NC0uNzg5IDIuNDQzIDIuNDQzIDAgMDAtLjc4OC0uNTM5IDIuNDA3IDIuNDA3IDAgMDAtMS42ODgtLjA5NGMtLjIzNC4wNjgtLjQ1My4xNy0uNjU2LjMwNWwzLjQ2IDMuNDYxek04LjQ2OSAxNWMuMjI0LjM3LjUuNzAzLjgyOCAxSDFWMGg4LjcxTDE0IDQuMjlWOGE0LjA3MyA0LjA3MyAwIDAwLTEtLjIxOVY1SDlWMUgydjE0aDYuNDY5ek0xMCA0aDIuMjlMMTAgMS43MVY0eiIgZmlsbD0iIzEwMTAxMCIvPjwvc3ZnPg==);<br/>
+}<br/>
+<br/>
+.icon-disconnected {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTE2MDAgMTE1MnE5MyAwIDE3NCAzNXQxNDMgOTYgOTYgMTQyIDM1IDE3NXEwIDkzLTM1IDE3NHQtOTYgMTQzLTE0MiA5Ni0xNzUgMzVxLTkzIDAtMTc0LTM1dC0xNDMtOTYtOTYtMTQyLTM1LTE3NXEwLTkzIDM1LTE3NHQ5Ni0xNDMgMTQyLTk2IDE3NS0zNXptLTMyMCA0NDhxMCA2NiAyNSAxMjR0NjggMTAyIDEwMiA2OSAxMjUgMjVxNDcgMCA5Mi0xM3Q4NC00MGwtNDQzLTQ0M3EtMjYgMzktMzkgODR0LTE0IDkyem01ODcgMTc2cTI2LTM5IDM5LTg0dDE0LTkycTAtNjYtMjUtMTI0dC02OS0xMDEtMTAyLTY5LTEyNC0yNnEtNDcgMC05MiAxM3QtODQgNDBsNDQzIDQ0M3ptLTc3NCAxMjVxMjIgMzYgNDggNjl0NTcgNjJxLTQzIDgtODYgMTJ0LTg4IDRxLTE0MSAwLTI3Mi0zNnQtMjQ0LTEwNC0yMDctMTYwLTE2MS0yMDctMTAzLTI0NS0zNy0yNzJxMC0xNDEgMzYtMjcydDEwNC0yNDQgMTYwLTIwNyAyMDctMTYxVDc1MiAzN3QyNzItMzdxMTQxIDAgMjcyIDM2dDI0NCAxMDQgMjA3IDE2MCAxNjEgMjA3IDEwMyAyNDUgMzcgMjcycTAgNDQtNCA4N3QtMTIgODdxLTU0LTU5LTExOC05OGw0LTM4cTItMTkgMi0zOCAwLTEzMC0zOC0yNTZoLTM2MnE4IDYyIDExIDEyM3Q1IDEyNHEtMzMgMy02NSAxMHQtNjQgMTh2LTM5cTAtNjAtNC0xMTh0LTEyLTExOEg2NTdxLTkgNjQtMTMgMTI3dC00IDEyOXEwIDY1IDQgMTI4dDEzIDEyOGg0NDZxLTM3IDU5LTYwIDEyOEg2NzlxOCAzNyAyMyA4OXQzNyAxMDkgNTEgMTEzIDY0IDEwMSA3OCA3MiA5MiAyOHExOCAwIDM1LTV0MzQtMTR6bTczOS0xMjYxcS0zOC04MS05MS0xNTJ0LTEyMC0xMzEtMTQzLTEwNC0xNjItNzVxMzYgNDkgNjQgMTA1dDUxIDExNSA0MCAxMjEgMjkgMTIxaDMzMnptLTgwOC01MTJxLTQ5IDAtOTEgMjd0LTc4IDczLTY1IDEwMS01MSAxMTMtMzcgMTA5LTIzIDg5aDY5MHEtOC0zNy0yMy04OXQtMzctMTA5LTUxLTExMy02NC0xMDEtNzgtNzItOTItMjh6bS0yOTIgNTBxLTg1IDI5LTE2MiA3NFQ0MjcgMzU3IDMwOCA0ODd0LTkyIDE1M2gzMzJxMTItNTkgMjgtMTIwdDM5LTEyMSA1Mi0xMTYgNjUtMTA1em0tNjA0IDg0NnEwIDEzMCAzOCAyNTZoMzYycS04LTY0LTEyLTEyN3QtNC0xMjlxMC02NSA0LTEyOHQxMi0xMjhIMTY2cS0zOCAxMjYtMzggMjU2em04OCAzODRxMzggODEgOTEgMTUydDEyMCAxMzEgMTQzIDEwNCAxNjIgNzVxLTM2LTQ5LTY1LTEwNXQtNTEtMTE1LTM5LTEyMS0yOS0xMjFIMjE2eiIgZmlsbD0iIzEwMTAxMCIvPjwvc3ZnPg==);<br/>
+}<br/>
+<br/>
+.icon-find {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExIDBjLjIwOCAwIC40MTIuMDM0LjYxLjEwMi4xOTcuMDYyLjM4LjE1My41NDYuMjczLjE2Ny4xMi4zMTMuMjYzLjQzOC40My4xMy4xNjEuMjI5LjM0LjI5Ny41MzlsMi44MzYgOC41Yy4xODIuNTM2LjI3MyAxLjA4OC4yNzMgMS42NTYgMCAuNDg0LS4wOTQuOTQtLjI4MSAxLjM2N2EzLjUzNyAzLjUzNyAwIDAxLS43NSAxLjExIDMuNTk2IDMuNTk2IDAgMDEtMS4xMS43NUEzLjM5IDMuMzkgMCAwMTEyLjUgMTVjLS40NjMgMC0uOTEyLS4wODgtMS4zNDQtLjI2NmEzLjQ2NSAzLjQ2NSAwIDAxLTEuMTMzLS43NTcgMy40NjUgMy40NjUgMCAwMS0uNzU3LTEuMTMzQTMuNTEzIDMuNTEzIDAgMDE5IDExLjVWOEg3djMuNWEzLjQ4OCAzLjQ4OCAwIDAxLTIuMTY0IDMuMjM0QTMuNDU0IDMuNDU0IDAgMDEzLjUgMTVhMy40NSAzLjQ1IDAgMDEtMS4zNjctLjI3MyAzLjcyMiAzLjcyMiAwIDAxLTEuMTEtLjc1IDMuNzIyIDMuNzIyIDAgMDEtLjc1LTEuMTFBMy40NDYgMy40NDYgMCAwMTAgMTEuNWMwLS41NjguMDkxLTEuMTIuMjczLTEuNjU2LjAyNi0uMDczLjA4Ni0uMjUuMTgtLjUzMWwuMzQ0LTEuMDQ3Yy4xNC0uNDE3LjI5NC0uODc1LjQ2LTEuMzc1YTUxNi4yMDYgNTE2LjIwNiAwIDAwMS4wMTYtMy4wMjRsLjQzLTEuMjk3Yy4xMjUtLjM3NS4yMjQtLjY3Ny4yOTctLjkwNmwuMTE3LS4zNDRjLjA3OC0uMTkyLjE4LS4zNy4zMDUtLjUzLjEyNS0uMTY4LjI2OC0uMzA4LjQzLS40MjMuMTY2LS4xMTQuMzQ2LS4yMDMuNTM5LS4yNjVBMS44MSAxLjgxIDAgMDE1IDBjLjM4NSAwIC43LjA2My45NDUuMTg4LjI1LjEyNC40NDguMjk0LjU5NC41MDcuMTUxLjIwOS4yNi40NS4zMjguNzI3LjA2OC4yNy4xMS41NTUuMTI1Ljg1MS4wMjEuMjk3LjAyNi41OTcuMDE2Ljg5OUM3LjAwMyAzLjQ2OSA3IDMuNzQ1IDcgNGgyYzAtLjI1NS0uMDA1LS41MzEtLjAxNi0uODI4LS4wMDUtLjMwMiAwLS42MDIuMDE2LS44OTkuMDItLjI5Ni4wNjUtLjU4LjEzMy0uODUxLjA2OC0uMjc2LjE3NC0uNTE4LjMyLS43MjdhMS42MSAxLjYxIDAgMDEuNTk0LS41MDdDMTAuMjk3LjA2MSAxMC42MTUgMCAxMSAwek0zLjUgMTRjLjM0NCAwIC42NjctLjA2NS45NjktLjE5NS4zMDItLjEzNi41NjUtLjMxNS43ODktLjU0YTIuNTMgMi41MyAwIDAwLjUzOS0uNzk2Yy4xMzUtLjMwMi4yMDMtLjYyNS4yMDMtLjk2OXMtLjA2OC0uNjY3LS4yMDMtLjk2OWEyLjQ0NCAyLjQ0NCAwIDAwLS41NC0uNzg5IDIuNDQ0IDIuNDQ0IDAgMDAtLjc4OC0uNTM5QTIuMzQxIDIuMzQxIDAgMDAzLjUgOWMtLjM0NCAwLS42NjcuMDY4LS45NjkuMjAzLS4zMDIuMTMtLjU2Ny4zMS0uNzk3LjU0YTIuNjIgMi42MiAwIDAwLS41MzkuNzg4Yy0uMTMuMzAyLS4xOTUuNjI1LS4xOTUuOTY5cy4wNjUuNjY3LjE5NS45NjljLjEzNi4zMDIuMzE1LjU2OC41NC43OTcuMjI5LjIyNC40OTQuNDAzLjc5Ni41MzkuMzAyLjEzLjYyNS4xOTUuOTY5LjE5NXpNNiAyYS45NDEuOTQxIDAgMDAtLjI5Ny0uNzAzQS45NDEuOTQxIDAgMDA1IDFjLS4yMDMgMC0uMzk2LjA2My0uNTc4LjE4OGEuOTYzLjk2MyAwIDAwLS4zNjcuNDg0TDEuNzk3IDguNDM4Yy4yNjYtLjE0MS41NDItLjI0OC44MjgtLjMyQTMuMzEgMy4zMSAwIDAxMy41IDhjLjE3MiAwIC4zOC4wMjYuNjI1LjA3OC4yNS4wNDcuNDk3LjExNy43NDIuMjExLjI1LjA4OS40NzcuMTk4LjY4LjMyOC4yMDguMTMuMzYuMjc2LjQ1My40MzhWMnptMyA1VjVIN3YyaDJ6bTEgMi4wNTVjLjA5NC0uMTYyLjI0Mi0uMzA4LjQ0NS0uNDM4LjIwOS0uMTMuNDM1LS4yNC42OC0uMzI4YTQuNDMgNC40MyAwIDAxLjc0Mi0uMjFjLjI1LS4wNTMuNDYxLS4wNzkuNjMzLS4wNzkuMjk3IDAgLjU4OC4wNC44NzUuMTE3LjI4Ny4wNzMuNTYzLjE4LjgyOC4zMmwtMi4yNTgtNi43NjVhLjk1Ljk1IDAgMDAtLjM3NS0uNDg0Ljk3Ljk3IDAgMDAtLjk2LS4xMSAxLjAzIDEuMDMgMCAwMC0uNTMyLjUzMUEuOTY5Ljk2OSAwIDAwMTAgMnY3LjA1NXpNMTIuNSAxNGMuMzQ0IDAgLjY2Ny0uMDY1Ljk2OS0uMTk1LjMwMi0uMTM2LjU2NS0uMzE1Ljc4OS0uNTRhMi41MyAyLjUzIDAgMDAuNTM5LS43OTZjLjEzNS0uMzAyLjIwMy0uNjI1LjIwMy0uOTY5cy0uMDY4LS42NjctLjIwMy0uOTY5YTIuNDQ0IDIuNDQ0IDAgMDAtLjU0LS43ODkgMi40NDQgMi40NDQgMCAwMC0uNzg4LS41MzlBMi4zNDEgMi4zNDEgMCAwMDEyLjUgOWMtLjM0NCAwLS42NjcuMDY4LS45NjkuMjAzYTIuNTIgMi41MiAwIDAwLS43OTcuNTQgMi42MiAyLjYyIDAgMDAtLjUzOS43ODhjLS4xMy4zMDItLjE5NS42MjUtLjE5NS45NjlzLjA2NS42NjcuMTk1Ljk2OWMuMTM2LjMwMi4zMTUuNTY4LjU0Ljc5Ny4yMjkuMjI0LjQ5NC40MDMuNzk2LjUzOS4zMDIuMTMuNjI1LjE5NS45NjkuMTk1eiIgZmlsbD0iIzEwMTAxMCIvPjwvc3ZnPg==);<br/>
+}<br/>
+<br/>
+.icon-insecure-site {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0IDd2OUgyVjdoOVY0YzAtLjQyNy0uMDc4LS44MjMtLjIzNC0xLjE4OGEyLjgxOSAyLjgxOSAwIDAwLS42MzMtLjk0NSAyLjgxOSAyLjgxOSAwIDAwLS45NDUtLjYzM0EyLjk4MiAyLjk4MiAwIDAwOCAxYy0uNDI3IDAtLjgyMy4wNzgtMS4xODguMjM0YTIuOTA1IDIuOTA1IDAgMDAtMS41ODUgMS41NzlBMy4wNjEgMy4wNjEgMCAwMDUgNEg0YzAtLjU2OC4xMDItMS4wOTQuMzA1LTEuNTc4LjIwMy0uNDkuNDg0LS45MTQuODQzLTEuMjc0QTMuOTIgMy45MiAwIDAxNi40MTQuMzA1IDQuMDk3IDQuMDk3IDAgMDE4IDBhNC4wNCA0LjA0IDAgMDExLjU3OC4zMDVjLjQ5LjIwMy45MTQuNDg0IDEuMjc0Ljg0My4zNTkuMzYuNjQuNzg0Ljg0MyAxLjI3NEE0LjA0IDQuMDQgMCAwMTEyIDR2M2gyem0tMSAxSDN2N2gxMFY4eiIgZmlsbD0iIzEwMTAxMCIvPjwvc3ZnPg==);<br/>
+}<br/>
+<br/>
+.icon-page-briefcase {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4wNTUgNjBhOC45NDggOC45NDggMCAwMDEuNDYgNEg0VjBoMzQuODQ0TDU2IDE3LjE1NnYxMi4wOTlBNi45NjggNi45NjggMCAwMDUyIDI4di04SDM2VjRIOHY1NmgxNi4wNTV6bTI1LjEwMS00NEg0MFY2Ljg0NEw0OS4xNTYgMTZ6IiBmaWxsPSIjMTAxMDEwIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zNyAzOHYtM2EzIDMgMCAwMTMtM2gxMmEzIDMgMCAwMTMgM3YzaDRhNSA1IDAgMDE1IDV2MTZhNSA1IDAgMDEtNSA1SDMzYTUgNSAwIDAxLTUtNVY0M2E1IDUgMCAwMTUtNWg0em00IDB2LTJoMTB2Mkg0MXptLTggNGExIDEgMCAwMC0xIDF2M2EzIDMgMCAwMDMgM2g4di0xYTEgMSAwIDAxMS0xaDRhMSAxIDAgMDExIDF2MWg4YTMgMyAwIDAwMy0zdi0zYTEgMSAwIDAwLTEtMUgzM3ptMiAxMWg4djFhMSAxIDAgMDAxIDFoNGExIDEgMCAwMDEtMXYtMWg4YzEuMDc0IDAgMi4wOS0uMjQyIDMtLjY3NFY1OWExIDEgMCAwMS0xIDFIMzNhMSAxIDAgMDEtMS0xdi02LjY3NGMuOTEuNDMyIDEuOTI2LjY3NCAzIC42NzR6IiBmaWxsPSIjMTAxMDEwIi8+PC9zdmc+);<br/>
+}<br/>
+<br/>
+.icon-disabled {<br/>
+  content: -webkit-image-set(<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABICAMAAAAZF4G5AAAABlBMVEVMaXFTU1OXUj8tAAAAAXRSTlMAQObYZgAAASZJREFUeAHd11Fq7jAMRGGf/W/6PoWB67YMqv5DybwG/CFjRuR8JBw3+ByiRjgV9W/TJ31P0tBfC6+cj1haUFXKHmVJo5wP98WwQ0ZCbfUc6LQ6VuUBz31ikADkLMkDrfUC4rR6QGW+gF6rx7NaHWCj1Y/W6lf4L7utvgBSt3rBFSS/XBMPUILcJINHCBWYUfpWn4NBi1ZfudIc3rf6/NGEvEA+AsYTJozmXemjXeLZAov+mnkN2HfzXpMSVQDnGw++57qNJ4D1xitA2sJ+VAWMygSEaYf2mYPTjZfk2K8wmP7HLIH5Mg4/pP+PEcDzUvDMvYbs/2NWwPO5vBdMZE4EE5UTQLiBFDaUlTDPBRoJ9HdAYIkIo06og3BNXtCzy7zA1aXk5x+tJARq63eAygAAAABJRU5ErkJggg==) 1x,<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAACQAQMAAAArwfVjAAAABlBMVEVMaXFTU1OXUj8tAAAAAXRSTlMAQObYZgAAAYdJREFUeF7F1EFqwzAUBNARAmVj0FZe5QoBH6BX+dn4GlY2PYNzGx/A0CvkCIJuvIraKJKbgBvzf2g62weDGD7CYggpfFReis4J0ey9EGFIiEQQojFSlA9kSIiqd0KkFjKsewgRbStEN19mxUPTtmW9HQ/h6tyqNQ8NlSMZdzyE6qkoE0trVYGFm0n1WYeBhduzwbwBC7voS+vIxfeMjeaiLxsMMtQNwMPtuew+DjzcTHk8YMfDknEcIUOtf2lVfgVH3K4Xv5PRYAXRVMtItIJ3rfaCIVn9DsTH2NxisAVRex2Hh3hX+/mRUR08bAwPEYsI51ZxWH4Q0SpicQRXeyEaIug48FEdegARfMz/tADVsRciwTAxW308ehmC2gLraC+YCbV3QoTZexa+zegAEW5PhhgYfmbvJgcRqngGByOSXdFJcLk2JeDPEN0kxe1JhIt5FiFA+w+ItMELsUyPF2IaJ4aILqb4FbxPwhImwj6JauKgDUCYaxmYIsd4KXdMjIC9ItB5Bn4BNRwsG0XM2nwAAAAASUVORK5CYII=) 2x);<br/>
+  width: 112px;<br/>
+}<br/>
+<br/>
+.managed-icon {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTIwNDggNTQ0djEwODhxMCAzMy0xMiA2MnQtMzUgNTEtNTEgMzQtNjIgMTNIMTYwcS0zMyAwLTYyLTEydC01MS0zNS0zNC01MS0xMy02MlY1NDRxMC0zMyAxMi02MnQzNS01MSA1MS0zNCA2Mi0xM2g0ODBWMjM2cTAtMjIgOC00MnQyMy0zNCAzNC0yMyA0My05aDU1MnEyMiAwIDQyIDh0MzQgMjMgMjMgMzUgOSA0MnYxNDhoNDgwcTMzIDAgNjIgMTJ0NTEgMzUgMzQgNTEgMTMgNjJ6TTc0OCAyMzZ2MTQ4aDU1MlYyMzZINzQ4em0xMTQwIDE0MjhxMTQgMCAyMy05dDktMjN2LTUxNHEtNjAgMzQtMTI4IDM0aC02NDB2ODNxMCAxOS0xMyAzMnQtMzIgMTNIOTQxcS0xOSAwLTMyLTEzdC0xMy0zMnYtODNIMjU2cS02OCAwLTEyOC0zNHY1MTRxMCAxNCA5IDIzdDIzIDloMTcyOHptLTk2LTY0MHEyNyAwIDUwLTEwdDQwLTI3IDI4LTQxIDEwLTUwVjU0NHEwLTE0LTktMjN0LTIzLTlIMTYwcS0xNCAwLTIzIDl0LTkgMjN2MzUycTAgMjcgMTAgNTB0MjcgNDAgNDEgMjggNTAgMTBoNjQwdi04M3EwLTE5IDEzLTMydDMyLTEzaDE2NnExOSAwIDMyIDEzdDEzIDMydjgzaDY0MHoiLz48L3N2Zz4=);<br/>
+  margin-inline-end: 6px;<br/>
+  height: 16px;<br/>
+  width: 16px;<br/>
+}<br/>
+<br/>
+.error-code {<br/>
+  display: block;<br/>
+  font-size: 10px;<br/>
+  line-height: 12px;<br/>
+  color: var(--edge-secondary-text-color);<br/>
+  margin-top: 24px;<br/>
+  font-weight: 500;<br/>
+}<br/>
+<br/>
+#content-top {<br/>
+  margin: 20px;<br/>
+}<br/>
+<br/>
+.hidden {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+#suggestion {<br/>
+  margin-top: 15px;<br/>
+}<br/>
+<br/>
+#suggestions-list p {<br/>
+  margin-block-end: 0;<br/>
+  color: var(--edge-primary-text-color);<br/>
+  font-weight: 700;<br/>
+}<br/>
+<br/>
+#suggestions-list ul {<br/>
+  margin-top: 0;<br/>
+  color: var(--edge-primary-text-color);<br/>
+  padding-inline-start: 0;<br/>
+  list-style: none;<br/>
+}<br/>
+<br/>
+#suggestions-list li {<br/>
+  margin-top: 12px;<br/>
+  font-size: 14px;<br/>
+  line-height: 20px;<br/>
+}<br/>
+<br/>
+#suggestions-list li:before {<br/>
+  content: "•";<br/>
+  font-size: 14px;<br/>
+  padding-right: 1em;<br/>
+}<br/>
+<br/>
+.single-suggestion li:before{<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+#short-suggestion {<br/>
+  margin-top: 5px;<br/>
+}<br/>
+<br/>
+#error-information-button {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTExIDE4aDJ2LTJoLTJ2MnptMS0xNkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnptMCAxOGMtNC40MSAwLTgtMy41OS04LThzMy41OS04IDgtOCA4IDMuNTkgOCA4LTMuNTkgOC04IDh6bTAtMTRjLTIuMjEgMC00IDEuNzktNCA0aDJjMC0xLjEuOS0yIDItMnMyIC45IDIgMmMwIDItMyAxLjc1LTMgNWgyYzAtMi4yNSAzLTIuNSAzLTUgMC0yLjIxLTEuNzktNC00LTR6Ii8+PC9zdmc+);<br/>
+  height: 24px;<br/>
+  vertical-align: -.15em;<br/>
+  width: 24px;<br/>
+}<br/>
+<br/>
+.use-popup-container#error-information-popup-container<br/>
+  #error-information-popup {<br/>
+  align-items: center;<br/>
+  background-color: var(--edge-grey-background);<br/>
+  display: flex;<br/>
+  height: 100%;<br/>
+  left: 0;<br/>
+  position: fixed;<br/>
+  top: 0;<br/>
+  width: 100%;<br/>
+  z-index: 100;<br/>
+}<br/>
+<br/>
+.use-popup-container#error-information-popup-container<br/>
+  #error-information-popup-content &gt; p {<br/>
+  margin-bottom: 11px;<br/>
+  margin-inline-start: 20px;<br/>
+}<br/>
+<br/>
+.use-popup-container#error-information-popup-container #suggestions-list ul {<br/>
+  margin-inline-start: 15px;<br/>
+}<br/>
+<br/>
+.use-popup-container#error-information-popup-container<br/>
+  #error-information-popup-box {<br/>
+  background-color: var(--edge-white);<br/>
+  left: 5%;<br/>
+  padding-bottom: 15px;<br/>
+  padding-top: 15px;<br/>
+  position: fixed;<br/>
+  width: 90%;<br/>
+  z-index: 101;<br/>
+}<br/>
+<br/>
+.use-popup-container#error-information-popup-container div.error-code {<br/>
+  margin-inline-start: 20px;<br/>
+}<br/>
+<br/>
+.use-popup-container#error-information-popup-container #suggestions-list p {<br/>
+  margin-inline-start: 20px;<br/>
+}<br/>
+<br/>
+:not(.use-popup-container)#error-information-popup-container<br/>
+  #error-information-popup-close {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+#error-information-popup-close {<br/>
+  margin-bottom: 0px;<br/>
+  margin-inline-end: 35px;<br/>
+  margin-top: 15px;<br/>
+  text-align: end;<br/>
+}<br/>
+<br/>
+.link-button {<br/>
+  color: var(--edge-text-blue-rest);<br/>
+  display: inline-block;<br/>
+  font-weight: bold;<br/>
+  text-transform: uppercase;<br/>
+}<br/>
+<br/>
+#sub-frame-error-details {<br/>
+  color: var(--edge-secondary-text-color);<br/>
+<br/>
+}<br/>
+<br/>
+[jscontent=hostName],<br/>
+[jscontent=failedUrl] {<br/>
+  overflow-wrap: break-word;<br/>
+}<br/>
+<br/>
+#search-container {<br/>
+  /* Prevents a space between controls. */<br/>
+  display: flex;<br/>
+  margin-top: 20px;<br/>
+}<br/>
+<br/>
+.snackbar {<br/>
+  background: #323232;<br/>
+  border-radius: 2px;<br/>
+  bottom: 24px;<br/>
+  box-sizing: border-box;<br/>
+  color: #fff;<br/>
+  font-size: .87em;<br/>
+  left: 24px;<br/>
+  max-width: 568px;<br/>
+  min-width: 288px;<br/>
+  opacity: 0;<br/>
+  padding: 16px 24px 12px;<br/>
+  position: fixed;<br/>
+  transform: translateY(90px);<br/>
+  will-change: opacity, transform;<br/>
+  z-index: 999;<br/>
+}<br/>
+<br/>
+.snackbar-show {<br/>
+  -webkit-animation:<br/>
+    show-snackbar .25s cubic-bezier(0.0, 0.0, 0.2, 1) forwards,<br/>
+    hide-snackbar .25s cubic-bezier(0.4, 0.0, 1, 1) forwards 5s;<br/>
+}<br/>
+<br/>
+@-webkit-keyframes show-snackbar {<br/>
+  100% {<br/>
+    opacity: 1;<br/>
+    transform: translateY(0);<br/>
+  }<br/>
+}<br/>
+<br/>
+@-webkit-keyframes hide-snackbar {<br/>
+  0% {<br/>
+    opacity: 1;<br/>
+    transform: translateY(0);<br/>
+  }<br/>
+  100% {<br/>
+    opacity: 0;<br/>
+    transform: translateY(90px);<br/>
+  }<br/>
+}<br/>
+<br/>
+.suggestions {<br/>
+  margin-top: 18px;<br/>
+  color: var(--edge-primary-text-color);<br/>
+  font-size: 14px;<br/>
+  line-height: 20px;<br/>
+}<br/>
+<br/>
+.suggestion-header {<br/>
+  font-weight: bold;<br/>
+  margin-bottom: 4px;<br/>
+}<br/>
+<br/>
+/* Decrease padding at low sizes. */<br/>
+@media (max-width: 640px), (max-height: 640px) {<br/>
+  h1 {<br/>
+    margin: 0 0 15px;<br/>
+  }<br/>
+  #content-top {<br/>
+    margin: 15px;<br/>
+  }<br/>
+  .suggestions {<br/>
+    margin-top: 10px;<br/>
+  }<br/>
+  .suggestion-header {<br/>
+    margin-bottom: 0;<br/>
+  }<br/>
+}<br/>
+<br/>
+#download-link, #download-link-clicked {<br/>
+  margin-bottom: 30px;<br/>
+  margin-top: 30px;<br/>
+}<br/>
+<br/>
+#download-link-clicked {<br/>
+  color: #BBB;<br/>
+}<br/>
+<br/>
+#download-link:before, #download-link-clicked:before {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjJlbSIgaGVpZ2h0PSIxLjJlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAyMGgxNHYtMkg1bTE0LTloLTRWM0g5djZINWw3IDcgNy03eiIgZmlsbD0iIzQyODVGNCIvPjwvc3ZnPg==);<br/>
+  display: inline-block;<br/>
+  margin-inline-end: 4px;<br/>
+  vertical-align: -webkit-baseline-middle;<br/>
+}<br/>
+<br/>
+#download-link-clicked:before {<br/>
+  width: 0px;<br/>
+  opacity: 0;<br/>
+}<br/>
+<br/>
+.offline-content-list-title {<br/>
+  color: rgb(95, 99, 104);<br/>
+  font-size: .8em;<br/>
+  line-height: 1;<br/>
+  margin-bottom: .8em;<br/>
+}<br/>
+<br/>
+#offline-content-suggestions {<br/>
+  margin-inline-start: -5%;<br/>
+  width: 110%;<br/>
+}<br/>
+<br/>
+/* The selectors below adjust the "overflow" of the suggestion cards contents<br/>
+ * based on the same screen size based strategy used for the main frame, which<br/>
+ * is applied by the `interstitial-wrapper` class. */<br/>
+@media (max-width: 700px) {<br/>
+  #offline-content-suggestions {<br/>
+    margin-inline-start: -5%;<br/>
+    width: 110%;<br/>
+  }<br/>
+}<br/>
+@media (max-width: 420px)  {<br/>
+  #offline-content-suggestions {<br/>
+    margin-inline-start: -2.5%;<br/>
+    width: 105%;<br/>
+  }<br/>
+}<br/>
+@media (max-width: 420px) and (orientation: portrait),<br/>
+       (max-height: 560px) {<br/>
+  #offline-content-suggestions {<br/>
+    margin-inline-start: -12px;<br/>
+    width: calc(100% + 24px);<br/>
+  }<br/>
+}<br/>
+<br/>
+.suggestion-with-image .offline-content-suggestion-visual {<br/>
+  flex-basis: 8.2em;<br/>
+  flex-shrink: 0;<br/>
+}<br/>
+<br/>
+.suggestion-with-image .offline-content-suggestion-visual &gt; img {<br/>
+  height: 100%;<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+#offline-content-list:not(.is-rtl) .suggestion-with-image<br/>
+.offline-content-suggestion-visual &gt; img {<br/>
+  border-bottom-right-radius: 8px;<br/>
+  border-top-right-radius: 8px;<br/>
+}<br/>
+<br/>
+#offline-content-list.is-rtl .suggestion-with-image<br/>
+.offline-content-suggestion-visual &gt; img {<br/>
+  border-bottom-left-radius: 8px;<br/>
+  border-top-left-radius: 8px;<br/>
+}<br/>
+<br/>
+.suggestion-with-icon .offline-content-suggestion-visual {<br/>
+  align-items: center;<br/>
+  display: flex;<br/>
+  justify-content: center;<br/>
+  min-height: 4.2em;<br/>
+  min-width: 4.2em;<br/>
+}<br/>
+<br/>
+.suggestion-with-icon .offline-content-suggestion-visual &gt; div {<br/>
+  align-items: center;<br/>
+  background-color: rgb(241, 243, 244);<br/>
+  border-radius: 50%;<br/>
+  display: flex;<br/>
+  height: 2.3em;<br/>
+  justify-content: center;<br/>
+  width: 2.3em;<br/>
+}<br/>
+<br/>
+.suggestion-with-icon .offline-content-suggestion-visual &gt; div &gt; img {<br/>
+  height: 1.45em;<br/>
+  width: 1.45em;<br/>
+}<br/>
+<br/>
+.offline-content-suggestion-texts {<br/>
+  display: flex;<br/>
+  flex-direction: column;<br/>
+  justify-content: space-between;<br/>
+  line-height: 1.3;<br/>
+  padding: .9em;<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+.offline-content-suggestion-title {<br/>
+  -webkit-box-orient: vertical;<br/>
+  -webkit-line-clamp: 3;<br/>
+  color: rgb(32, 33, 36);<br/>
+  display: -webkit-box;<br/>
+  font-size: 1.1em;<br/>
+  overflow: hidden;<br/>
+  text-overflow: ellipsis;<br/>
+}<br/>
+<br/>
+div.offline-content-suggestion {<br/>
+  align-items: stretch;<br/>
+  border-color: rgb(218, 220, 224);<br/>
+  border-radius: 8px;<br/>
+  border-style: solid;<br/>
+  border-width: 1px;<br/>
+  display: flex;<br/>
+  justify-content: space-between;<br/>
+  margin-bottom: .8em;<br/>
+}<br/>
+<br/>
+.suggestion-with-image {<br/>
+  flex-direction: row;<br/>
+  height: 8.2em;<br/>
+  max-height: 8.2em;<br/>
+}<br/>
+<br/>
+.suggestion-with-icon {<br/>
+  flex-direction: row-reverse;<br/>
+  height: 4.2em;<br/>
+  max-height: 4.2em;<br/>
+}<br/>
+<br/>
+.suggestion-with-icon .offline-content-suggestion-title {<br/>
+  -webkit-line-clamp: 1;<br/>
+  word-break: break-all;<br/>
+}<br/>
+<br/>
+.suggestion-with-icon .offline-content-suggestion-texts {<br/>
+  padding-inline-start: 0px;<br/>
+}<br/>
+<br/>
+.offline-content-suggestion-attribution-freshness {<br/>
+  color: rgb(95, 99, 104);<br/>
+  display: flex;<br/>
+  font-size: .8em;<br/>
+}<br/>
+<br/>
+.offline-content-suggestion-attribution {<br/>
+  -webkit-box-orient: vertical;<br/>
+  -webkit-line-clamp: 1;<br/>
+  display: -webkit-box;<br/>
+  flex-shrink: 1;<br/>
+  overflow-wrap: break-word;<br/>
+  overflow: hidden;<br/>
+  text-overflow: ellipsis;<br/>
+  word-break: break-all;<br/>
+}<br/>
+<br/>
+.no-attribution .offline-content-suggestion-attribution {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+.offline-content-suggestion-freshness:before {<br/>
+  content: '-';<br/>
+  display: inline-block;<br/>
+  flex-shrink: 0;<br/>
+  margin-inline-end: .1em;<br/>
+  margin-inline-start: .1em;<br/>
+}<br/>
+<br/>
+.no-attribution .offline-content-suggestion-freshness:before {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+.offline-content-suggestion-freshness {<br/>
+  flex-shrink: 0;<br/>
+}<br/>
+<br/>
+.suggestion-with-image .offline-content-suggestion-pin-spacer {<br/>
+  flex-shrink: 1;<br/>
+  flex-grow: 100;<br/>
+}<br/>
+<br/>
+.suggestion-with-image .offline-content-suggestion-pin {<br/>
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PGRlZnM+PHBhdGggaWQ9ImEiIGQ9Ik0wIDBoMjR2MjRIMFYweiIvPjwvZGVmcz48Y2xpcFBhdGggaWQ9ImIiPjx1c2UgeGxpbms6aHJlZj0iI2EiIG92ZXJmbG93PSJ2aXNpYmxlIi8+PC9jbGlwUGF0aD48cGF0aCBjbGlwLXBhdGg9InVybCgjYikiIGQ9Ik0xMiAyQzYuNSAyIDIgNi41IDIgMTJzNC41IDEwIDEwIDEwIDEwLTQuNSAxMC0xMFMxNy41IDIgMTIgMnptNSAxNkg3di0yaDEwdjJ6bS02LjctNEw3IDEwLjdsMS40LTEuNCAxLjkgMS45IDUuMy01LjNMMTcgNy4zIDEwLjMgMTR6IiBmaWxsPSIjOUFBMEE2Ii8+PC9zdmc+);<br/>
+  flex-shrink: 0;<br/>
+  height: 1.4em;<br/>
+  margin-inline-start: .4em;<br/>
+  width: 1.4em;<br/>
+}<br/>
+<br/>
+.offline-content-list-action {<br/>
+  text-align: center;<br/>
+}<br/>
+<br/>
+#offline-content-summary {<br/>
+  border-color: rgb(241, 243, 244);<br/>
+  border-radius: 12px;<br/>
+  border-style: solid;<br/>
+  border-width: 1px;<br/>
+  padding: 12px;<br/>
+  text-align: center;<br/>
+}<br/>
+<br/>
+.offline-content-summary-image-truncate {<br/>
+  width: 45px;<br/>
+}<br/>
+<br/>
+.offline-content-summary-images {<br/>
+  direction: ltr;<br/>
+  display: flex;<br/>
+  margin-top: 10px;<br/>
+  justify-content: center;<br/>
+  padding-bottom: 12px;<br/>
+}<br/>
+<br/>
+.offline-content-summary-images img {<br/>
+  background: rgb(241, 243, 244);<br/>
+  border-radius: 50%;<br/>
+  box-shadow:<br/>
+    0px 1px 2px 0px rgb(155, 155, 155),<br/>
+    0px 1px 3px 0px rgb(155, 155, 155);<br/>
+  padding: 12px;<br/>
+  width: 32px;<br/>
+}<br/>
+<br/>
+.offline-content-summary-description {<br/>
+  border-top: 1px solid rgb(241, 243, 244);<br/>
+  padding-top: 12px;<br/>
+}<br/>
+<br/>
+.offline-content-summary-action {<br/>
+  padding-top: 12px;<br/>
+}<br/>
+<br/>
+/* Don't allow overflow when in a subframe. */<br/>
+html[subframe] body {<br/>
+  overflow: hidden;<br/>
+}<br/>
+<br/>
+#sub-frame-error {<br/>
+  -webkit-align-items: center;<br/>
+  background-color: #DDD;<br/>
+  display: -webkit-flex;<br/>
+  -webkit-flex-flow: column;<br/>
+  height: 100%;<br/>
+  -webkit-justify-content: center;<br/>
+  left: 0;<br/>
+  position: absolute;<br/>
+  text-align: center;<br/>
+  top: 0;<br/>
+  transition: background-color .2s ease-in-out;<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+#sub-frame-error:hover {<br/>
+  background-color: #EEE;<br/>
+}<br/>
+<br/>
+#sub-frame-error .icon-generic {<br/>
+  margin: 0 0 16px;<br/>
+}<br/>
+<br/>
+#sub-frame-error-details {<br/>
+  margin: 0 10px;<br/>
+  text-align: center;<br/>
+  visibility: hidden;<br/>
+}<br/>
+<br/>
+/* Show details only when hovering. */<br/>
+#sub-frame-error:hover #sub-frame-error-details {<br/>
+  visibility: visible;<br/>
+}<br/>
+<br/>
+/* If the iframe is too small, always hide the error code. */<br/>
+/* TODO(mmenke): See if overflow: no-display works better, once supported. */<br/>
+@media (max-width: 200px), (max-height: 95px) {<br/>
+  #sub-frame-error-details {<br/>
+    display: none;<br/>
+  }<br/>
+}<br/>
+<br/>
+/* Adjust icon for small embedded frames in apps. */<br/>
+@media (max-height: 100px) {<br/>
+  #sub-frame-error .icon-generic {<br/>
+    height: auto;<br/>
+    margin: 0;<br/>
+    padding-top: 0;<br/>
+    width: 25px;<br/>
+  }<br/>
+}<br/>
+<br/>
+#control-buttons {<br/>
+  margin-bottom: 44px;<br/>
+}<br/>
+<br/>
+/* details-button is special; it's a &lt;button&gt; element that looks like a link. */<br/>
+#details-buttons {<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+#details-button {<br/>
+  box-shadow: none;<br/>
+  min-width: 0;<br/>
+  background: none;<br/>
+  border: none;<br/>
+  color: var(--edge-primary-text-color);<br/>
+  cursor: pointer;<br/>
+  font-size: 14px;<br/>
+  line-height: 20px;<br/>
+  text-decoration: none;<br/>
+  float: left;<br/>
+  padding: 4px;<br/>
+  font-family: system-ui, sans-serif;<br/>
+}<br/>
+<br/>
+#details-button:before {<br/>
+  display: inline-block;<br/>
+  content: "";<br/>
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjM2MTMgNC43MzYzM0wxMy44ODg3IDUuMjYzNjdMOCAxMS4xNTIzTDIuMTExMzMgNS4yNjM2N0wyLjYzODY3IDQuNzM2MzNMOCAxMC4wOTc3TDEzLjM2MTMgNC43MzYzM1oiIGZpbGw9IiMxMDEwMTAiLz4KPC9zdmc+Cg==");<br/>
+  margin-right: 10px;<br/>
+  width: 14px;<br/>
+  height: 10px;<br/>
+  background-repeat: no-repeat;<br/>
+  background-position: center center;<br/>
+  fill: var(--edge-primary-text-color);<br/>
+}<br/>
+<br/>
+#details-button.expanded:before {<br/>
+  transform: rotate(180deg);<br/>
+}<br/>
+<br/>
+#details-button:focus {<br/>
+  outline: solid 2px var(--edge-focus-color);<br/>
+}<br/>
+@media (forced-colors: active) {<br/>
+  #details-button,<br/>
+  #game-button {<br/>
+    -ms-high-contrast-adjust: none;<br/>
+    color: ButtonText;<br/>
+    background-color: ButtonFace;<br/>
+  }<br/>
+  #game-button {<br/>
+    /* extra border for this button only */<br/>
+    border: 1px solid ButtonText;<br/>
+  }<br/>
+  #details-button::before,<br/>
+  #game-button::before {<br/>
+    fill: ButtonText;<br/>
+  }<br/>
+  #details-button:focus,<br/>
+  #game-button:focus {<br/>
+    outline: 2px solid ButtonText;<br/>
+  }<br/>
+  #details-button:hover,<br/>
+  #game-button:hover {<br/>
+    background-color: Highlight;<br/>
+    color: HighlightText;<br/>
+  }<br/>
+  #details-button:hover::before,<br/>
+  #game-button:hover::before {<br/>
+    fill: HighlightText;<br/>
+  }<br/>
+}<br/>
+<br/>
+.nav-wrapper {<br/>
+  margin-top: 44px;<br/>
+}<br/>
+<br/>
+#control-buttons,<br/>
+#stale-load-button,<br/>
+#details-buttons {<br/>
+  float: left !important;<br/>
+}<br/>
+<br/>
+.suggested-left .secondary-button {<br/>
+  margin-inline-end: 0px;<br/>
+}<br/>
+<br/>
+#details-button.singular {<br/>
+  float: none;<br/>
+}<br/>
+<br/>
+/* download-button shows both icon and text. */<br/>
+#download-button {<br/>
+  padding-bottom: 4px;<br/>
+  padding-top: 4px;<br/>
+  position: relative;<br/>
+}<br/>
+<br/>
+#download-button:before {<br/>
+  background: -webkit-image-set(<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAO0lEQVQ4y2NgGArgPxIY1YChsOE/LtBAmpYG0mxpIOSDBpKUo2lpIDZxNJCkHKqlYZAla3RAHQ1DFgAARRroHyLNTwwAAAAASUVORK5CYII=) 1x,<br/>
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAZElEQVRYw+3Ruw3AMAwDUY3OzZUmRRD4E9iim9wNwAdbEURHyk4AAAAATiCVK8lLyPsKeT9K3lsownnunfkPxO78hKiYHxBV8x2icr5BVM+/CMf8g3DN34Rzns6ViwHUAUQ/6wIAd5Km7l6c8AAAAABJRU5ErkJggg==) 2x)<br/>
+    no-repeat;<br/>
+  content: '';<br/>
+  display: inline-block;<br/>
+  width: 24px;<br/>
+  height: 24px;<br/>
+  margin-inline-end: 4px;<br/>
+  margin-inline-start: -4px;<br/>
+  vertical-align: middle;<br/>
+}<br/>
+<br/>
+#download-button:disabled {<br/>
+  background: rgb(180, 206, 249);<br/>
+  color: rgb(255, 255, 255);<br/>
+}<br/>
+<br/>
+/*<br/>
+TODO(https://crbug.com/852872): UI for offline suggested content is incomplete.<br/>
+*/<br/>
+.suggested-thumbnail {<br/>
+  width: 25vw;<br/>
+  height: 25vw;<br/>
+}<br/>
+<br/>
+#reload-button {<br/>
+  background-color: var(--edge-blue-rest);<br/>
+  color: white; /* always white because it is a blue button */<br/>
+  border-radius: 2px;<br/>
+  width: 100px;<br/>
+  height: 32px;<br/>
+  font-family: system-ui, sans-serif;<br/>
+  font-weight: 600;<br/>
+  font-size: 12px;<br/>
+  padding: 0;<br/>
+  outline: none;<br/>
+}<br/>
+<br/>
+#reload-button:focus {<br/>
+  outline: var(--edge-focus-outline);<br/>
+  box-shadow: var(--edge-primary-button-focus-shadow);<br/>
+}<br/>
+<br/>
+#reload-button:hover {<br/>
+  background-color: var(--edge-blue-hover);<br/>
+}<br/>
+<br/>
+#reload-button:active {<br/>
+  background-color: var(--edge-blue-pressed);<br/>
+}<br/>
+<br/>
+@media (forced-colors: active) {<br/>
+  /* Acts like an accent button */<br/>
+  #reload-button {<br/>
+    -ms-high-contrast-adjust: none;<br/>
+    background-color: Highlight;<br/>
+    color: HighlightText;<br/>
+  }<br/>
+  #reload-button:hover {<br/>
+    background-color: HighlightText;<br/>
+    color: Highlight;<br/>
+    border: 2px solid Highlight;<br/>
+  }<br/>
+  #reload-button:focus {<br/>
+    outline: 2px solid ButtonText;<br/>
+    box-shadow: none;<br/>
+  }<br/>
+}<br/>
+<br/>
+/* Offline page */<br/>
+.offline {<br/>
+  transition: -webkit-filter 1.5s cubic-bezier(0.65, 0.05, 0.36, 1),<br/>
+              background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);<br/>
+  will-change: -webkit-filter, background-color;<br/>
+}<br/>
+<br/>
+#main-message &gt; p {<br/>
+  font-size: 14px;<br/>
+  line-height: 20px;<br/>
+  color: var(--edge-primary-text-color);<br/>
+}<br/>
+.offline #main-message &gt; p {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+.offline.inverted {<br/>
+  -webkit-filter: invert(100%);<br/>
+  background-color: var(--edge-black);<br/>
+}<br/>
+<br/>
+.offline .interstitial-wrapper {<br/>
+  color: #2b2b2b;<br/>
+  font-size: 1em;<br/>
+  line-height: 1.55;<br/>
+  margin: 0 auto;<br/>
+  max-width: 600px;<br/>
+  padding-top: 100px;<br/>
+  width: 100%;<br/>
+}<br/>
+<br/>
+.offline .controller {<br/>
+  background: rgba(247,247,247, .1);<br/>
+  height: 100vh;<br/>
+  left: 0;<br/>
+  position: absolute;<br/>
+  top: 0;<br/>
+  width: 100vw;<br/>
+  z-index: 9;<br/>
+}<br/>
+<br/>
+#offline-resources {<br/>
+  display: none;<br/>
+}<br/>
+<br/>
+@media (max-width: 420px) {<br/>
+  #download-button {<br/>
+    padding-bottom: 12px;<br/>
+    padding-top: 12px;<br/>
+  }<br/>
+<br/>
+  .snackbar {<br/>
+    left: 0;<br/>
+    bottom: 0;<br/>
+    width: 100%;<br/>
+    border-radius: 0;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-height: 350px) {<br/>
+  h1 {<br/>
+    margin: 0 0 15px;<br/>
+  }<br/>
+<br/>
+  .icon-offline {<br/>
+    margin: 0 0 10px;<br/>
+  }<br/>
+<br/>
+  .interstitial-wrapper {<br/>
+    margin-top: 5%;<br/>
+  }<br/>
+<br/>
+  .nav-wrapper {<br/>
+    margin-top: 30px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (min-width: 420px) and (max-width: 736px) and<br/>
+       (min-height: 240px) and (max-height: 420px) and<br/>
+       (orientation:landscape) {<br/>
+  .interstitial-wrapper {<br/>
+    margin-bottom: 100px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-width: 360px) and (max-height: 480px) {<br/>
+  .offline .interstitial-wrapper {<br/>
+    padding-top: 60px;<br/>
+  }<br/>
+<br/>
+}<br/>
+<br/>
+@media (min-height: 240px) and (orientation: landscape) {<br/>
+  .offline .interstitial-wrapper {<br/>
+    margin-bottom: 90px;<br/>
+  }<br/>
+<br/>
+  .icon-offline {<br/>
+    margin-bottom: 20px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-height: 320px) and (orientation: landscape) {<br/>
+  .icon-offline {<br/>
+    margin-bottom: 0;<br/>
+  }<br/>
+<br/>
+}<br/>
+<br/>
+@media (max-width: 240px) {<br/>
+  button {<br/>
+    padding-left: 12px;<br/>
+    padding-right: 12px;<br/>
+  }<br/>
+<br/>
+  .interstitial-wrapper {<br/>
+    overflow: inherit;<br/>
+    padding: 0 8px;<br/>
+  }<br/>
+}<br/>
+<br/>
+@media (max-width: 120px) {<br/>
+  button {<br/>
+    width: auto;<br/>
+  }<br/>
+}<br/>
+<br/>
+<br/>
+@media (prefers-color-scheme: dark) {<br/>
+  .icon,<br/>
+  .managed-icon {<br/>
+    filter: invert(1);<br/>
+  }<br/>
+<br/>
+  #details-button:before {<br/>
+    filter: invert(1);<br/>
+  }<br/>
+}<br/>
+&lt;/style&gt; <br/>
+  &lt;script&gt;// Copyright 2017 The Chromium Authors<br/>
+// Copyright (C) Microsoft Corporation. All rights reserved.<br/>
+// Use of this source code is governed by a BSD-style license that can be<br/>
+// found in the LICENSE file.<br/>
+<br/>
+// This is the shared code for security interstitials. It is used for both SSL<br/>
+// interstitials and Safe Browsing interstitials.<br/>
+<br/>
+/**<br/>
+ * @typedef {{<br/>
+ *   dontProceed: function(),<br/>
+ *   proceed: function(),<br/>
+ *   showMoreSection: function(),<br/>
+ *   openHelpCenter: function(),<br/>
+ *   openDiagnostic: function(),<br/>
+ *   reload: function(),<br/>
+ *   openDateSettings: function(),<br/>
+ *   openLogin: function(),<br/>
+ *   doReport: function(),<br/>
+ *   dontReport: function(),<br/>
+ *   openReportingPrivacy: function(),<br/>
+ *   openWhitepaper: function(),<br/>
+ *   reportPhishingError: function(),<br/>
+ *   openEdgeFeedbackDialog: function(),<br/>
+ *   proceedAndAlwaysAllow: function(),<br/>
+ * }}<br/>
+ */<br/>
+// eslint-disable-next-line no-var<br/>
+var certificateErrorPageController;<br/>
+<br/>
+// Should match security_interstitials::SecurityInterstitialCommand<br/>
+/** @enum {number} */<br/>
+const SecurityInterstitialCommandId = {<br/>
+  // For SmartScreen only<br/>
+  CMD_INTERSTITIAL_PAGE_LOADED: -32,<br/>
+  CMD_MCAS_SUPPORT_PAGE: -31,<br/>
+<br/>
+  CMD_DONT_PROCEED: 0,<br/>
+  CMD_PROCEED: 1,<br/>
+  // Ways for user to get more information<br/>
+  CMD_SHOW_MORE_SECTION: 2,<br/>
+  CMD_OPEN_HELP_CENTER: 3,<br/>
+  CMD_OPEN_DIAGNOSTIC: 4,<br/>
+  // Primary button actions<br/>
+  CMD_RELOAD: 5,<br/>
+  CMD_OPEN_DATE_SETTINGS: 6,<br/>
+  CMD_OPEN_LOGIN: 7,<br/>
+  // Safe Browsing Extended Reporting<br/>
+  CMD_DO_REPORT: 8,<br/>
+  CMD_DONT_REPORT: 9,<br/>
+  CMD_OPEN_REPORTING_PRIVACY: 10,<br/>
+  CMD_OPEN_WHITEPAPER: 11,<br/>
+  // Report a phishing error.<br/>
+  CMD_REPORT_PHISHING_ERROR: 12,<br/>
+  // Open enhanced protection settings.<br/>
+  CMD_OPEN_ENHANCED_PROTECTION_SETTINGS: 13,<br/>
+<br/>
+  // Edge specific commands are to be offset by 1000<br/>
+  // Open Edge privacy settings.<br/>
+  CMD_OPEN_EDGE_PRIVACY_SETTINGS: 1000,<br/>
+  // Open Edge Feedback dialog<br/>
+  CMD_OPEN_EDGE_FEEDBACK_DIALOG: 1001,<br/>
+  // Allow the user to proceed to the blocked website and add url to<br/>
+  // TyposquattingChecker semi-permanent allowlist<br/>
+  CMD_TYPOSQUATTING_PROCEED_AND_ALWAYS_ALLOW: 1002,<br/>
+};<br/>
+<br/>
+const HIDDEN_CLASS = 'hidden';<br/>
+<br/>
+/**<br/>
+ * A convenience method for sending commands to the parent page.<br/>
+ * @param {SecurityInterstitialCommandId} cmd  The command to send.<br/>
+ */<br/>
+function sendCommand(cmd) {<br/>
+  if (window.certificateErrorPageController) {<br/>
+    switch (cmd) {<br/>
+      case SecurityInterstitialCommandId.CMD_DONT_PROCEED:<br/>
+        certificateErrorPageController.dontProceed();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_PROCEED:<br/>
+        certificateErrorPageController.proceed();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_SHOW_MORE_SECTION:<br/>
+        certificateErrorPageController.showMoreSection();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_HELP_CENTER:<br/>
+        certificateErrorPageController.openHelpCenter();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_DIAGNOSTIC:<br/>
+        certificateErrorPageController.openDiagnostic();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_RELOAD:<br/>
+        certificateErrorPageController.reload();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_DATE_SETTINGS:<br/>
+        certificateErrorPageController.openDateSettings();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_LOGIN:<br/>
+        certificateErrorPageController.openLogin();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_DO_REPORT:<br/>
+        certificateErrorPageController.doReport();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_DONT_REPORT:<br/>
+        certificateErrorPageController.dontReport();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_REPORTING_PRIVACY:<br/>
+        certificateErrorPageController.openReportingPrivacy();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_WHITEPAPER:<br/>
+        certificateErrorPageController.openWhitepaper();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_REPORT_PHISHING_ERROR:<br/>
+        certificateErrorPageController.reportPhishingError();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_INTERSTITIAL_PAGE_LOADED:<br/>
+        certificateErrorPageController.interstitialLoaded();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_MCAS_SUPPORT_PAGE:<br/>
+        certificateErrorPageController.mcasSupportPage();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_ENHANCED_PROTECTION_SETTINGS:<br/>
+        certificateErrorPageController.openEnhancedProtectionSettings();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_EDGE_PRIVACY_SETTINGS:<br/>
+        certificateErrorPageController.openEdgePrivacySettings();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_OPEN_EDGE_FEEDBACK_DIALOG:<br/>
+        certificateErrorPageController.openEdgeFeedbackDialog();<br/>
+        break;<br/>
+      case SecurityInterstitialCommandId.CMD_TYPOSQUATTING_PROCEED_AND_ALWAYS_ALLOW:<br/>
+        certificateErrorPageController.proceedAndAlwaysAllow();<br/>
+    }<br/>
+    return;<br/>
+  }<br/>
+  // <br/>
+  window.domAutomationController.send(cmd);<br/>
+  // <br/>
+  // <br/>
+}<br/>
+<br/>
+/**<br/>
+ * Call this to stop clicks on &lt;a href="#"&gt; links from scrolling to the top of<br/>
+ * the page (and possibly showing a # in the link).<br/>
+ */<br/>
+function preventDefaultOnPoundLinkClicks() {<br/>
+  const anchors = document.body.querySelectorAll('a[href="#"]');<br/>
+  for (const anchor of anchors) {<br/>
+    anchor.addEventListener('click', e =&gt; e.preventDefault());<br/>
+  }<br/>
+}<br/>
+<br/>
+// <br/>
+<br/>
+// <br/>
+<br/>
+&lt;/script&gt; <br/>
+  &lt;script&gt;// Copyright 2015 The Chromium Authors<br/>
+// Use of this source code is governed by a BSD-style license that can be<br/>
+// found in the LICENSE file.<br/>
+<br/>
+let mobileNav = false;<br/>
+<br/>
+/**<br/>
+ * For small screen mobile the navigation buttons are moved<br/>
+ * below the advanced text.<br/>
+ */<br/>
+function onResize() {<br/>
+  const helpOuterBox = document.querySelector('#details');<br/>
+  const mainContent = document.querySelector('#main-content');<br/>
+  const mediaQuery = '(min-width: 240px) and (max-width: 420px) and ' +<br/>
+      '(min-height: 401px), ' +<br/>
+      '(max-height: 560px) and (min-height: 240px) and ' +<br/>
+      '(min-width: 421px)';<br/>
+<br/>
+  const detailsHidden = helpOuterBox.classList.contains(HIDDEN_CLASS);<br/>
+  const runnerContainer = document.querySelector('.runner-container');<br/>
+<br/>
+  // Check for change in nav status.<br/>
+  if (mobileNav !== window.matchMedia(mediaQuery).matches) {<br/>
+    mobileNav = !mobileNav;<br/>
+<br/>
+    // Handle showing the top content / details sections according to state.<br/>
+    if (mobileNav) {<br/>
+      mainContent.classList.toggle(HIDDEN_CLASS, !detailsHidden);<br/>
+      helpOuterBox.classList.toggle(HIDDEN_CLASS, detailsHidden);<br/>
+      if (runnerContainer) {<br/>
+        runnerContainer.classList.toggle(HIDDEN_CLASS, !detailsHidden);<br/>
+      }<br/>
+    } else if (!detailsHidden) {<br/>
+      // Non mobile nav with visible details.<br/>
+      mainContent.classList.remove(HIDDEN_CLASS);<br/>
+      helpOuterBox.classList.remove(HIDDEN_CLASS);<br/>
+      if (runnerContainer) {<br/>
+        runnerContainer.classList.remove(HIDDEN_CLASS);<br/>
+      }<br/>
+    }<br/>
+  }<br/>
+}<br/>
+<br/>
+function setupMobileNav() {<br/>
+  window.addEventListener('resize', onResize);<br/>
+  onResize();<br/>
+}<br/>
+<br/>
+document.addEventListener('DOMContentLoaded', setupMobileNav);<br/>
+&lt;/script&gt; <br/>
+  &lt;script&gt;// Copyright 2013 The Chromium Authors. All rights reserved.<br/>
+// Copyright (C) Microsoft Corporation. All rights reserved.<br/>
+// Use of this source code is governed by a BSD-style license that can be<br/>
+// found in the LICENSE file.<br/>
+<br/>
+function toggleHelpBox() {<br/>
+  const helpBoxOuter = document.getElementById('details');<br/>
+  helpBoxOuter.classList.toggle(HIDDEN_CLASS);<br/>
+  const detailsButton = document.getElementById('details-button');<br/>
+  if (helpBoxOuter.classList.contains(HIDDEN_CLASS)) {<br/>
+    detailsButton.innerText = detailsButton.detailsText;<br/>
+    detailsButton.classList.remove('expanded');<br/>
+  } else {<br/>
+    detailsButton.innerText = detailsButton.hideDetailsText;<br/>
+    detailsButton.classList.add('expanded');<br/>
+  }<br/>
+<br/>
+  // Details appears over the main content on small screens.<br/>
+  if (mobileNav) {<br/>
+    document.getElementById('main-content').classList.toggle(HIDDEN_CLASS);<br/>
+    const runnerContainer = document.querySelector('.runner-container');<br/>
+    if (runnerContainer) {<br/>
+      runnerContainer.classList.toggle(HIDDEN_CLASS);<br/>
+    }<br/>
+  }<br/>
+}<br/>
+<br/>
+function diagnoseErrors() {<br/>
+  // <br/>
+  if (window.errorPageController) {<br/>
+    errorPageController.diagnoseErrorsButtonClick();<br/>
+  }<br/>
+  // <br/>
+  // <br/>
+}<br/>
+<br/>
+// Subframes use a different layout but the same html file.  This is to make it<br/>
+// easier to support platforms that load the error page via different<br/>
+// mechanisms (Currently just iOS). We also use the subframe style for portals<br/>
+// as they are embedded like subframes and can't be interacted with by the user.<br/>
+if (window.top.location != window.location || window.portalHost) {<br/>
+  document.documentElement.setAttribute('subframe', '');<br/>
+}<br/>
+<br/>
+// Re-renders the error page using |strings| as the dictionary of values.<br/>
+// Used by NetErrorTabHelper to update DNS error pages with probe results.<br/>
+function updateForDnsProbe(strings) {<br/>
+  const context = new JsEvalContext(strings);<br/>
+  jstProcess(context, document.getElementById('t'));<br/>
+}<br/>
+<br/>
+// Given the classList property of an element, adds an icon class to the list<br/>
+// and removes the previously-<br/>
+function updateIconClass(classList, newClass) {<br/>
+  let oldClass;<br/>
+<br/>
+  if (classList.hasOwnProperty('last_icon_class')) {<br/>
+    oldClass = classList['last_icon_class'];<br/>
+    if (oldClass == newClass) {<br/>
+      return;<br/>
+    }<br/>
+  }<br/>
+<br/>
+  classList.add(newClass);<br/>
+  if (oldClass !== undefined) {<br/>
+    classList.remove(oldClass);<br/>
+  }<br/>
+<br/>
+  classList['last_icon_class'] = newClass;<br/>
+<br/>
+  document.body.classList.add('neterror');<br/>
+}<br/>
+<br/>
+// Does a search using |baseSearchUrl| and the text in the search box.<br/>
+function search(baseSearchUrl) {<br/>
+  const searchTextNode = document.getElementById('search-box');<br/>
+  document.location = baseSearchUrl + searchTextNode.value;<br/>
+  return false;<br/>
+}<br/>
+<br/>
+// Called when an &lt;a&gt; tag generated by the navigation correction service is<br/>
+// clicked.<br/>
+// @param {{clickData: string}} jstdata<br/>
+function navigationCorrectionClicked(jstdata) {<br/>
+  if (jstdata.clickData !== undefined && errorPageController) {<br/>
+    errorPageController.edgeNavigationCorrectionClicked(jstdata.clickData);<br/>
+  }<br/>
+}<br/>
+<br/>
+// Implements button clicks.  This function is needed during the transition<br/>
+// between implementing these in trunk chromium and implementing them in<br/>
+// iOS.<br/>
+function reloadButtonClick(url) {<br/>
+  if (window.errorPageController) {<br/>
+    errorPageController.reloadButtonClick();<br/>
+  } else {<br/>
+    location = url;<br/>
+  }<br/>
+}<br/>
+<br/>
+function showSavedCopyButtonClick() {<br/>
+  if (window.errorPageController) {<br/>
+    errorPageController.showSavedCopyButtonClick();<br/>
+  }<br/>
+}<br/>
+<br/>
+function downloadButtonClick() {<br/>
+  if (window.errorPageController) {<br/>
+    errorPageController.downloadButtonClick();<br/>
+    const downloadButton = document.getElementById('download-button');<br/>
+    downloadButton.disabled = true;<br/>
+    downloadButton.textContent = downloadButton.disabledText;<br/>
+<br/>
+    document.getElementById('download-link-wrapper')<br/>
+      .classList.add(HIDDEN_CLASS);<br/>
+    document.getElementById('download-link-clicked-wrapper')<br/>
+      .classList.remove(HIDDEN_CLASS);<br/>
+  }<br/>
+}<br/>
+<br/>
+function detailsButtonClick() {<br/>
+  if (window.errorPageController) {<br/>
+    errorPageController.detailsButtonClick();<br/>
+  }<br/>
+}<br/>
+<br/>
+let primaryControlOnLeft = true;<br/>
+// <br/>
+<br/>
+// TODO(crbug.com/883486): UI not yet implemented.<br/>
+function setAutoFetchState(scheduled, can_schedule) {<br/>
+}<br/>
+<br/>
+function toggleErrorInformationPopup() {<br/>
+  document.getElementById('error-information-popup-container')<br/>
+    .classList.toggle(HIDDEN_CLASS);<br/>
+}<br/>
+<br/>
+function launchOfflineItem(itemID, name_space) {<br/>
+  errorPageController.launchOfflineItem(itemID, name_space);<br/>
+}<br/>
+<br/>
+function launchDownloadsPage() {<br/>
+  errorPageController.launchDownloadsPage();<br/>
+}<br/>
+<br/>
+// Populates a summary of suggested offline content.<br/>
+function offlineContentSummaryAvailable(summary) {<br/>
+  // Note: See AvailableContentSummaryToValue in<br/>
+  // available_offline_content_helper.cc for the data contained in |summary|.<br/>
+  if (!summary || summary.total_items == 0 ||<br/>
+    !loadTimeData.valueExists('offlineContentSummary')) {<br/>
+    return;<br/>
+  }<br/>
+  // TODO(https://crbug.com/852872): Customize presented icons based on the<br/>
+  // types of available offline content.<br/>
+  document.getElementById('offline-content-summary').hidden = false;<br/>
+}<br/>
+<br/>
+function getIconForSuggestedItem(item) {<br/>
+  // Note: |item.content_type| contains the enum values from<br/>
+  // chrome::mojom::AvailableContentType.<br/>
+  switch (item.content_type) {<br/>
+    case 1:  // kVideo<br/>
+      return 'image-video';<br/>
+    case 2:  // kAudio<br/>
+      return 'image-music-note';<br/>
+    case 0:  // kPrefetchedPage<br/>
+    case 3:  // kOtherPage<br/>
+      return 'image-earth';<br/>
+  }<br/>
+  return 'image-file';<br/>
+}<br/>
+<br/>
+function getSuggestedContentDiv(item, index) {<br/>
+  // Note: See AvailableContentToValue in available_offline_content_helper.cc<br/>
+  // for the data contained in an |item|.<br/>
+  // TODO(carlosk): Present |snippet_base64| when that content becomes<br/>
+  // available.<br/>
+  let visual = '';<br/>
+  const extraContainerClasses = [];<br/>
+  // html_inline.py will try to replace src attributes with data URIs using a<br/>
+  // simple regex. The following is obfuscated slightly to avoid that.<br/>
+  const src = 'src';<br/>
+  if (item.thumbnail_data_uri) {<br/>
+    extraContainerClasses.push('suggestion-with-image');<br/>
+    visual = `&lt;img ${src}="${item.thumbnail_data_uri}"&gt;`;<br/>
+  } else {<br/>
+    extraContainerClasses.push('suggestion-with-icon');<br/>
+    iconClass = getIconForSuggestedItem(item);<br/>
+    visual = `&lt;div&gt;&lt;img class="${iconClass}"&gt;&lt;/div&gt;`;<br/>
+  }<br/>
+<br/>
+  if (!item.attribution_base64) {<br/>
+    extraContainerClasses.push('no-attribution');<br/>
+  }<br/>
+<br/>
+  return `<br/>
+  &lt;div class="offline-content-suggestion ${extraContainerClasses.join(' ')}"<br/>
+    onclick="launchOfflineItem('${item.ID}', '${item.name_space}')"&gt;<br/>
+      &lt;div class="offline-content-suggestion-texts"&gt;<br/>
+        &lt;div id="offline-content-suggestion-title-${index}"<br/>
+             class="offline-content-suggestion-title"&gt;<br/>
+        &lt;/div&gt;<br/>
+        &lt;div class="offline-content-suggestion-attribution-freshness"&gt;<br/>
+          &lt;div id="offline-content-suggestion-attribution-${index}"<br/>
+               class="offline-content-suggestion-attribution"&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="offline-content-suggestion-freshness"&gt;<br/>
+            ${item.date_modified}<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="offline-content-suggestion-pin-spacer"&gt;&lt;/div&gt;<br/>
+          &lt;div class="offline-content-suggestion-pin"&gt;&lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="offline-content-suggestion-visual"&gt;<br/>
+        ${visual}<br/>
+      &lt;/div&gt;<br/>
+  &lt;/div&gt;`;<br/>
+}<br/>
+<br/>
+// Populates a list of suggested offline content.<br/>
+// Note: For security reasons all content downloaded from the web is considered<br/>
+// unsafe and must be securely handled to be presented on the dino page. Images<br/>
+// have already been safely re-encoded but textual content -- like title and<br/>
+// attribution -- must be properly handled here.<br/>
+function offlineContentAvailable(suggestions) {<br/>
+  if (!suggestions || !loadTimeData.valueExists('offlineContentList')) {<br/>
+    return;<br/>
+  }<br/>
+<br/>
+  const suggestionsHTML = [];<br/>
+  for (let index = 0; index &lt; suggestions.length; index++) {<br/>
+    suggestionsHTML.push(getSuggestedContentDiv(suggestions[index], index));<br/>
+  }<br/>
+<br/>
+  document.getElementById('offline-content-suggestions').innerHTML =<br/>
+    suggestionsHTML.join('\n');<br/>
+<br/>
+  // Sets textual web content using |textContent| to make sure it's handled as<br/>
+  // plain text.<br/>
+  for (let index = 0; index &lt; suggestions.length; index++) {<br/>
+    document.getElementById(`offline-content-suggestion-title-${index}`)<br/>
+      .textContent = atob(suggestions[index].title_base64);<br/>
+    document.getElementById(`offline-content-suggestion-attribution-${index}`)<br/>
+      .textContent = atob(suggestions[index].attribution_base64);<br/>
+  }<br/>
+<br/>
+  const contentListElement = document.getElementById('offline-content-list');<br/>
+  if (document.dir == 'rtl') {<br/>
+    contentListElement.classList.add('is-rtl');<br/>
+  }<br/>
+  contentListElement.hidden = false;<br/>
+}<br/>
+<br/>
+function onDocumentLoad() {<br/>
+  const controlButtonDiv = document.getElementById('control-buttons');<br/>
+  const reloadButton = document.getElementById('reload-button');<br/>
+  const detailsButton = document.getElementById('details-button');<br/>
+  const showSavedCopyButton = document.getElementById('show-saved-copy-button');<br/>
+  const downloadButton = document.getElementById('download-button');<br/>
+  const gameButton = document.getElementById('game-button');<br/>
+  const gameButtonContainer = document.getElementById('game-buttons');<br/>
+<br/>
+  const reloadButtonVisible = loadTimeData.valueExists('reloadButton') &&<br/>
+    loadTimeData.getValue('reloadButton').msg;<br/>
+  const showSavedCopyButtonVisible =<br/>
+    loadTimeData.valueExists('showSavedCopyButton') &&<br/>
+    loadTimeData.getValue('showSavedCopyButton').msg;<br/>
+  const downloadButtonVisible =<br/>
+    loadTimeData.valueExists('downloadButton') &&<br/>
+    loadTimeData.getValue('downloadButton').msg;<br/>
+  const gameButtonDisabled =<br/>
+    loadTimeData.valueExists('disabledGame') &&<br/>
+    loadTimeData.getBoolean('disabledGame');<br/>
+<br/>
+  if (gameButtonDisabled) {<br/>
+    gameButton.disabled = true;<br/>
+    const managedIcon = gameButtonContainer.getElementsByClassName('managed-icon')[0];<br/>
+    if (!!managedIcon && loadTimeData.valueExists('playGameMsg')) {<br/>
+      managedIcon.setAttribute('title', loadTimeData.getString('disabledGameMsg'));<br/>
+    }<br/>
+  }<br/>
+<br/>
+  // If Automatic HTTPS suggestions are defined, show messages.<br/>
+  const automaticHTTPSVisible =<br/>
+    loadTimeData.valueExists('httpsUpgradesMessage');<br/>
+  if (automaticHTTPSVisible) {<br/>
+    document.getElementById('https-upgrades-message')<br/>
+      .classList.toggle(HIDDEN_CLASS);<br/>
+    document.getElementById('https-upgrades-message-details')<br/>
+      .classList.toggle(HIDDEN_CLASS);<br/>
+  }<br/>
+<br/>
+  // If offline content suggestions will be visible, the usual buttons will not<br/>
+  // be presented.<br/>
+  const offlineContentVisible =<br/>
+    loadTimeData.valueExists('suggestedOfflineContentPresentationMode');<br/>
+  if (offlineContentVisible) {<br/>
+    document.querySelector('.nav-wrapper').classList.add(HIDDEN_CLASS);<br/>
+    detailsButton.classList.add(HIDDEN_CLASS);<br/>
+<br/>
+    if (downloadButtonVisible) {<br/>
+      document.getElementById('download-link').hidden = false;<br/>
+    }<br/>
+<br/>
+    document.getElementById('download-links-wrapper')<br/>
+      .classList.remove(HIDDEN_CLASS);<br/>
+    document.getElementById('error-information-popup-container')<br/>
+      .classList.add('use-popup-container', HIDDEN_CLASS);<br/>
+    document.getElementById('error-information-button')<br/>
+      .classList.remove(HIDDEN_CLASS);<br/>
+<br/>
+    return;<br/>
+  }<br/>
+<br/>
+  let primaryButton, secondaryButton;<br/>
+  if (showSavedCopyButton.primary) {<br/>
+    primaryButton = showSavedCopyButton;<br/>
+    secondaryButton = reloadButton;<br/>
+  } else {<br/>
+    primaryButton = reloadButton;<br/>
+    secondaryButton = showSavedCopyButton;<br/>
+  }<br/>
+<br/>
+  // Sets up the proper button layout for the current platform.<br/>
+  if (primaryControlOnLeft) {<br/>
+    buttons.classList.add('suggested-left');<br/>
+    controlButtonDiv.insertBefore(secondaryButton, primaryButton);<br/>
+  } else {<br/>
+    buttons.classList.add('suggested-right');<br/>
+    controlButtonDiv.insertBefore(primaryButton, secondaryButton);<br/>
+  }<br/>
+<br/>
+  if (reloadButton.style.display == 'none' &&<br/>
+    showSavedCopyButton.style.display == 'none' &&<br/>
+    downloadButton.style.display == 'none') {<br/>
+    detailsButton.classList.add('singular');<br/>
+  }<br/>
+<br/>
+  // Show control buttons.<br/>
+  if (reloadButtonVisible || showSavedCopyButtonVisible ||<br/>
+    downloadButtonVisible) {<br/>
+    controlButtonDiv.hidden = false;<br/>
+<br/>
+    // Set the secondary button state in the cases of two call to actions.<br/>
+    if ((reloadButtonVisible || downloadButtonVisible) &&<br/>
+      showSavedCopyButtonVisible) {<br/>
+      secondaryButton.classList.add('secondary-button');<br/>
+    }<br/>
+  }<br/>
+}<br/>
+<br/>
+function launchGame() {<br/>
+  const gameButtonDisabled =<br/>
+    loadTimeData.valueExists('disabledGame') &&<br/>
+    loadTimeData.getBoolean('disabledGame');<br/>
+  if (!gameButtonDisabled) {<br/>
+    // <br/>
+<br/>
+    // <br/>
+    errorPageController.openSurfGame();<br/>
+    // <br/>
+  }<br/>
+}<br/>
+<br/>
+// Opens edge://settings/privacy.<br/>
+function launchEdgePrivacySettings() {<br/>
+  errorPageController.openEdgePrivacySettings();<br/>
+}<br/>
+<br/>
+// Updates https_upgrade_state from<br/>
+// third_party/blink/public/mojom/renderer_preferences.mojom to<br/>
+// edge_https::UpgradeState::UPGRADE_FAILURE_IGNORED if Edge's<br/>
+// Automatic HTTPS component needs to be bypassed.<br/>
+function updateHttpsUpgradeState() {<br/>
+  errorPageController.bypassEdgeHttpsUpgrades();<br/>
+}<br/>
+<br/>
+document.addEventListener('DOMContentLoaded', onDocumentLoad);<br/>
+&lt;/script&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body id="t" style="font-family: system-ui, sans-serif; font-size: 75%" jstcache="0" class="neterror"&gt; <br/>
+  &lt;div id="main-frame-error" class="interstitial-wrapper" jstcache="0"&gt; <br/>
+   &lt;div id="main-content" jstcache="0"&gt; <br/>
+    &lt;div class="icon icon-thinking" jseval="updateIconClass(this.classList, iconClass)" alt="" jstcache="2"&gt;&lt;/div&gt; <br/>
+    &lt;div id="main-message" jstcache="0"&gt; <br/>
+     &lt;h1 jstcache="0"&gt; &lt;span jsselect="heading" jsvalues=".innerHTML:msg" jstcache="14"&gt;Vaya… no se puede obtener acceso a esta página&lt;/span&gt; &lt;a id="error-information-button" class="hidden" onclick="toggleErrorInformationPopup();" jstcache="0"&gt;&lt;/a&gt; &lt;/h1&gt; <br/>
+     &lt;p jsselect="summary" jsvalues=".innerHTML:msg" jstcache="3"&gt;Compruebe si hay un error tipográfico en &lt;span jscontent="hostName" jstcache="27"&gt;https&lt;/span&gt;.&lt;/p&gt; <br/>
+     &lt;div id="https-upgrades-message" class="hidden" jstcache="0"&gt; <br/>
+      &lt;p id="https-upgrades-message-details" jsselect="httpsUpgradesMessage" jsvalues=".innerHTML:msg" class="hidden" jstcache="15" style="display: none;"&gt;&lt;/p&gt; <br/>
+     &lt;/div&gt; &lt;!--The suggestion list and error code are normally presented inline,<br/>
+          in which case error-information-popup-* divs have no effect. When<br/>
+          error-information-popup-container has the use-popup-container class, this<br/>
+          information is provided in a popup instead.--&gt; <br/>
+     &lt;div id="error-information-popup-container" jstcache="0"&gt; <br/>
+      &lt;div id="error-information-popup" jstcache="0"&gt; <br/>
+       &lt;div id="error-information-popup-box" jstcache="0"&gt; <br/>
+        &lt;div id="error-information-popup-content" jstcache="0"&gt; <br/>
+         &lt;div id="suggestions-list" style="" jsdisplay="(suggestionsSummaryList &amp;&amp; suggestionsSummaryList.length)" jstcache="21"&gt; <br/>
+          &lt;p jsvalues=".innerHTML:suggestionsSummaryListHeader" jstcache="23"&gt;&lt;/p&gt; <br/>
+          &lt;ul jsvalues=".className:suggestionsSummaryList.length == 1 ? 'single-suggestion' : ''" jstcache="24" class="single-suggestion"&gt; <br/>
+           &lt;li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="26" jsinstance="*0"&gt;Si la ortografía es correcta, &lt;a href="javascript:diagnoseErrors()" id="diagnose-link" jstcache="0"&gt;intente ejecutar el diagnóstico de red de Windows&lt;/a&gt;.&lt;/li&gt; <br/>
+          &lt;/ul&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div class="error-code" jscontent="errorCode" jstcache="22"&gt;<br/>
+          DNS_PROBE_FINISHED_NXDOMAIN<br/>
+         &lt;/div&gt; <br/>
+         &lt;p id="error-information-popup-close" jstcache="0"&gt; &lt;a class="link-button" jscontent="closeDescriptionPopup" onclick="toggleErrorInformationPopup();" jstcache="25"&gt;null&lt;/a&gt; &lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div id="diagnose-frame" class="hidden" jstcache="0"&gt;&lt;/div&gt; <br/>
+     &lt;div id="download-links-wrapper" class="hidden" jstcache="0"&gt; <br/>
+      &lt;div id="download-link-wrapper" jstcache="0"&gt; &lt;a id="download-link" class="link-button" onclick="downloadButtonClick()" jsselect="downloadButton" jscontent="msg" jsvalues=".disabledText:disabledMsg" jstcache="10" style="display: none;"&gt; &lt;/a&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div id="download-link-clicked-wrapper" class="hidden" jstcache="0"&gt; <br/>
+       &lt;div id="download-link-clicked" class="link-button" jsselect="downloadButton" jscontent="disabledMsg" jstcache="19" style="display: none;"&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div id="offline-content-list" hidden jstcache="0"&gt; <br/>
+      &lt;div class="offline-content-list-title" jsselect="offlineContentList" jscontent="title" jstcache="16" style="display: none;"&gt;&lt;/div&gt; <br/>
+      &lt;div id="offline-content-suggestions" jstcache="0"&gt;&lt;/div&gt; <br/>
+      &lt;div class="offline-content-list-action" jstcache="0"&gt; &lt;a class="link-button" onclick="launchDownloadsPage()" jsselect="offlineContentList" jscontent="actionText" jstcache="20" style="display: none;"&gt; &lt;/a&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div id="offline-content-summary" onclick="launchDownloadsPage()" hidden jstcache="0"&gt; <br/>
+      &lt;div class="offline-content-summary-images" jstcache="0"&gt; <br/>
+       &lt;div class="offline-content-summary-image-truncate" jstcache="0"&gt; <br/>
+        &lt;img id="earth" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMmM1LjUyIDAgMTAgNC40OCAxMCAxMHMtNC40OCAxMC0xMCAxMFMyIDE3LjUyIDIgMTIgNi40OCAyIDEyIDJ6TTQgMTJoNC40YzMuNDA3LjAyMiA0LjkyMiAxLjczIDQuNTQzIDUuMTI3SDkuNDg4djIuNDdhOC4wMDQgOC4wMDQgMCAwIDAgMTAuNDk4LTguMDgzQzE5LjMyNyAxMi41MDQgMTguMzMyIDEzIDE3IDEzYy0yLjEzNyAwLTMuMjA2LS45MTYtMy4yMDYtMi43NWgtMy43NDhjLS4yNzQtMi43MjguNjgzLTQuMDkyIDIuODctNC4wOTIgMC0uOTc1LjMyNy0xLjU5Ny44MTEtMS45N0E4LjAwNCA4LjAwNCAwIDAgMCA0IDEyeiIgZmlsbD0iIzNDNDA0MyIvPjwvc3ZnPg==" jstcache="0"&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="offline-content-summary-image-truncate" jstcache="0"&gt; <br/>
+        &lt;img id="music-note" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgM3Y5LjI2Yy0uNS0uMTctMS0uMjYtMS41LS4yNkM4IDEyIDYgMTQgNiAxNi41UzggMjEgMTAuNSAyMXM0LjUtMiA0LjUtNC41VjZoNFYzaC03eiIgZmlsbD0iIzNDNDA0MyIvPjwvc3ZnPg==" jstcache="0"&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="offline-content-summary-image-truncate" jstcache="0"&gt; <br/>
+        &lt;img id="video" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTcgMTAuNVY3YTEgMSAwIDAgMC0xLTFINGExIDEgMCAwIDAtMSAxdjEwYTEgMSAwIDAgMCAxIDFoMTJhMSAxIDAgMCAwIDEtMXYtMy41bDQgNHYtMTFsLTQgNHoiIGZpbGw9IiMzQzQwNDMiLz48L3N2Zz4=" jstcache="0"&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div jstcache="0"&gt; &lt;!-- Pump Follow Up Bug #20954431 --&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+      &lt;div class="offline-content-summary-description" jsselect="offlineContentSummary" jscontent="description" jstcache="17" style="display: none;"&gt; <br/>
+      &lt;/div&gt; &lt;a class="offline-content-summary-action link-button" jsselect="offlineContentSummary" jscontent="actionText" jstcache="18" style="display: none;"&gt; &lt;/a&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div id="buttons" class="nav-wrapper suggested-left" jstcache="0"&gt; <br/>
+    &lt;div id="control-buttons" jstcache="0"&gt; &lt;button id="show-saved-copy-button" class="blue-button text-button" onclick="showSavedCopyButtonClick()" jsselect="showSavedCopyButton" jscontent="msg" jsvalues="title:title; .primary:primary" jstcache="9" style="display: none;"&gt; &lt;/button&gt;&lt;button id="reload-button" class="blue-button text-button" onclick="reloadButtonClick(this.url);" jsselect="reloadButton" jsvalues=".url:reloadUrl" jscontent="msg" jstcache="8"&gt;Actualizar&lt;/button&gt; &lt;button id="download-button" class="blue-button text-button" onclick="downloadButtonClick()" jsselect="downloadButton" jscontent="msg" jsvalues=".disabledText:disabledMsg" jstcache="10" style="display: none;"&gt; &lt;/button&gt; <br/>
+    &lt;/div&gt; <br/>
+    &lt;div id="details-buttons" jstcache="0"&gt; &lt;button id="details-button" onclick="detailsButtonClick(); toggleHelpBox()" jscontent="details" jsdisplay="(suggestionsDetails &amp;&amp; suggestionsDetails.length &gt; 0) || diagnose" jsvalues=".detailsText:details; .hideDetailsText:hideDetails;" jstcache="11" style="display: none;"&gt;&lt;/button&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div id="details" class="hidden" jstcache="0"&gt; <br/>
+    &lt;div class="suggestions" jsselect="suggestionsDetails" jstcache="4" jsinstance="*0" style="display: none;"&gt; <br/>
+     &lt;div class="suggestion-header" jsvalues=".innerHTML:header" jstcache="12"&gt;&lt;/div&gt; <br/>
+     &lt;div class="suggestion-body" jsvalues=".innerHTML:body" jstcache="13"&gt;&lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+   &lt;div id="game-buttons" jsdisplay="!!showGameButtons" jstcache="1" style="display: none;"&gt; &lt;span id="game-message" jscontent="playGameMsg" jstcache="5"&gt;&lt;/span&gt; <br/>
+    &lt;div class="managed-icon" jsdisplay="!!disabledGame" jstcache="6"&gt;&lt;/div&gt; &lt;button id="game-button" onclick="launchGame()" jsselect="gameButton" jscontent="msg" jstcache="7"&gt;&lt;/button&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div id="sub-frame-error" jstcache="0"&gt; &lt;!-- Show details when hovering over the icon, in case the details are<br/>
+         hidden because they're too large. --&gt; <br/>
+   &lt;div class="icon icon-thinking" jseval="updateIconClass(this.classList, iconClass)" jstcache="2"&gt;&lt;/div&gt; <br/>
+   &lt;div id="sub-frame-error-details" jsselect="summary" jsvalues=".innerHTML:msg" jstcache="3"&gt;<br/>
+    Compruebe si hay un error tipográfico en &lt;span jscontent="hostName" jstcache="27"&gt;https&lt;/span&gt;.<br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;script jstcache="0"&gt;(function(){function l(a,b,c){return Function.prototype.call.apply(Array.prototype.slice,arguments)}function m(a,b,c){var e=l(arguments,2);return function(){return b.apply(a,e)}}function n(a,b){var c=new p(b);for(c.h=[a];c.h.length;){var e=c,d=c.h.shift();e.i(d);for(d=d.firstChild;d;d=d.nextSibling)1==d.nodeType&&e.h.push(d)}}function p(a){this.i=a}function q(a){a.style.display=""}function r(a){a.style.display="none"};var t=/\s*;\s*/;function u(a,b){this.l.apply(this,arguments)}u.prototype.l=function(a,b){this.a||(this.a={});if(b){var c=this.a,e=b.a;for(d in e)c[d]=e[d]}else{var d=this.a;e=v;for(c in e)d[c]=e[c]}this.a.$this=a;this.a.$context=this;this.f="undefined"!=typeof a&&null!=a?a:"";b||(this.a.$top=this.f)};var v={$default:null},w=[];function x(a){for(var b in a.a)delete a.a[b];a.f=null;w.push(a)}function y(a,b,c){try{return b.call(c,a.a,a.f)}catch(e){return v.$default}}<br/>
+u.prototype.clone=function(a,b,c){if(0&lt;w.length){var e=w.pop();u.call(e,a,this);a=e}else a=new u(a,this);a.a.$index=b;a.a.$count=c;return a};var z;window.trustedTypes&&(z=trustedTypes.createPolicy("jstemplate",{createScript:function(a){return a}}));var A={};function B(a){if(!A[a])try{var b="(function(a_, b_) { with (a_) with (b_) return "+a+" })",c=window.trustedTypes?z.createScript(b):b;A[a]=window.eval(c)}catch(e){}return A[a]}<br/>
+function E(a){var b=[];a=a.split(t);for(var c=0,e=a.length;c&lt;e;++c){var d=a[c].indexOf(":");if(!(0&gt;d)){var g=a[c].substr(0,d).replace(/^\s+/,"").replace(/\s+$/,"");d=B(a[c].substr(d+1));b.push(g,d)}}return b};function F(){}var G=0,H={0:{}},I={},J={},K=[];function L(a){a.__jstcache||n(a,function(b){M(b)})}var N=[["jsselect",B],["jsdisplay",B],["jsvalues",E],["jsvars",E],["jseval",function(a){var b=[];a=a.split(t);for(var c=0,e=a.length;c&lt;e;++c)if(a[c]){var d=B(a[c]);b.push(d)}return b}],["transclude",function(a){return a}],["jscontent",B],["jsskip",B]];<br/>
+function M(a){if(a.__jstcache)return a.__jstcache;var b=a.getAttribute("jstcache");if(null!=b)return a.__jstcache=H[b];b=K.length=0;for(var c=N.length;b&lt;c;++b){var e=N[b][0],d=a.getAttribute(e);J[e]=d;null!=d&&K.push(e+"="+d)}if(0==K.length)return a.setAttribute("jstcache","0"),a.__jstcache=H[0];var g=K.join("&");if(b=I[g])return a.setAttribute("jstcache",b),a.__jstcache=H[b];var h={};b=0;for(c=N.length;b&lt;c;++b){d=N[b];e=d[0];var f=d[1];d=J[e];null!=d&&(h[e]=f(d))}b=""+ ++G;a.setAttribute("jstcache",<br/>
+b);H[b]=h;I[g]=b;return a.__jstcache=h}function P(a,b){a.j.push(b);a.o.push(0)}function Q(a){return a.c.length?a.c.pop():[]}<br/>
+F.prototype.g=function(a,b){var c=R(b),e=c.transclude;if(e)(c=S(e))?(b.parentNode.replaceChild(c,b),e=Q(this),e.push(this.g,a,c),P(this,e)):b.parentNode.removeChild(b);else if(c=c.jsselect){c=y(a,c,b);var d=b.getAttribute("jsinstance");var g=!1;d&&("*"==d.charAt(0)?(d=parseInt(d.substr(1),10),g=!0):d=parseInt(d,10));var h=null!=c&&"object"==typeof c&&"number"==typeof c.length;e=h?c.length:1;var f=h&&0==e;if(h)if(f)d?b.parentNode.removeChild(b):(b.setAttribute("jsinstance","*0"),r(b));else if(q(b),<br/>
+null===d||""===d||g&&d&lt;e-1){g=Q(this);d=d||0;for(h=e-1;d&lt;h;++d){var k=b.cloneNode(!0);b.parentNode.insertBefore(k,b);T(k,c,d);f=a.clone(c[d],d,e);g.push(this.b,f,k,x,f,null)}T(b,c,d);f=a.clone(c[d],d,e);g.push(this.b,f,b,x,f,null);P(this,g)}else d&lt;e?(g=c[d],T(b,c,d),f=a.clone(g,d,e),g=Q(this),g.push(this.b,f,b,x,f,null),P(this,g)):b.parentNode.removeChild(b);else null==c?r(b):(q(b),f=a.clone(c,0,1),g=Q(this),g.push(this.b,f,b,x,f,null),P(this,g))}else this.b(a,b)};<br/>
+F.prototype.b=function(a,b){var c=R(b),e=c.jsdisplay;if(e){if(!y(a,e,b)){r(b);return}q(b)}if(e=c.jsvars)for(var d=0,g=e.length;d&lt;g;d+=2){var h=e[d],f=y(a,e[d+1],b);a.a[h]=f}if(e=c.jsvalues)for(d=0,g=e.length;d&lt;g;d+=2)if(f=e[d],h=y(a,e[d+1],b),"$"==f.charAt(0))a.a[f]=h;else if("."==f.charAt(0)){f=f.substr(1).split(".");for(var k=b,O=f.length,C=0,U=O-1;C&lt;U;++C){var D=f[C];k[D]||(k[D]={});k=k[D]}k[f[O-1]]=h}else f&&("boolean"==typeof h?h?b.setAttribute(f,f):b.removeAttribute(f):b.setAttribute(f,""+h));<br/>
+if(e=c.jseval)for(d=0,g=e.length;d&lt;g;++d)y(a,e[d],b);e=c.jsskip;if(!e||!y(a,e,b))if(c=c.jscontent){if(c=""+y(a,c,b),b.innerHTML!=c){for(;b.firstChild;)e=b.firstChild,e.parentNode.removeChild(e);b.appendChild(this.m.createTextNode(c))}}else{c=Q(this);for(e=b.firstChild;e;e=e.nextSibling)1==e.nodeType&&c.push(this.g,a,e);c.length&&P(this,c)}};function R(a){if(a.__jstcache)return a.__jstcache;var b=a.getAttribute("jstcache");return b?a.__jstcache=H[b]:M(a)}<br/>
+function S(a,b){var c=document;if(b){var e=c.getElementById(a);if(!e){e=b();var d=c.getElementById("jsts");d||(d=c.createElement("div"),d.id="jsts",r(d),d.style.position="absolute",c.body.appendChild(d));var g=c.createElement("div");d.appendChild(g);g.innerHTML=e;e=c.getElementById(a)}c=e}else c=c.getElementById(a);return c?(L(c),c=c.cloneNode(!0),c.removeAttribute("id"),c):null}function T(a,b,c){c==b.length-1?a.setAttribute("jsinstance","*"+c):a.setAttribute("jsinstance",""+c)};window.jstGetTemplate=S;window.JsEvalContext=u;window.jstProcess=function(a,b){var c=new F;L(b);c.m=b?9==b.nodeType?b:b.ownerDocument||document:document;var e=m(c,c.g,a,b),d=c.j=[],g=c.o=[];c.c=[];e();for(var h,f,k;d.length;)h=d[d.length-1],e=g[g.length-1],e&gt;=h.length?(e=c,f=d.pop(),f.length=0,e.c.push(f),g.pop()):(f=h[e++],k=h[e++],h=h[e++],g[g.length-1]=e,f.call(c,k,h))};<br/>
+})()&lt;/script&gt;<br/>
+  &lt;script jstcache="0"&gt;"use strict";<br/>
+// Copyright 2012 The Chromium Authors<br/>
+// Use of this source code is governed by a BSD-style license that can be<br/>
+// found in the LICENSE file.<br/>
+var loadTimeData;class LoadTimeData{constructor(){this.data_=null}set data(value){expect(!this.data_,"Re-setting data.");this.data_=value}valueExists(id){return id in this.data_}getValue(id){expect(this.data_,"No data. Did you remember to include strings.js?");const value=this.data_[id];expect(typeof value!=="undefined","Could not find value for "+id);return value}getString(id){const value=this.getValue(id);expectIsType(id,value,"string");return value}getStringF(id,var_args){const value=this.getString(id);if(!value){return""}const args=Array.prototype.slice.call(arguments);args[0]=value;return this.substituteString.apply(this,args)}substituteString(label,var_args){const varArgs=arguments;return label.replace(/\$(.|$|\n)/g,(function(m){expect(m.match(/\$[$1-9]/),"Unescaped $ found in localized string.");return m==="$$"?"$":varArgs[m[1]]}))}getBoolean(id){const value=this.getValue(id);expectIsType(id,value,"boolean");return value}getInteger(id){const value=this.getValue(id);expectIsType(id,value,"number");expect(value===Math.floor(value),"Number isn't integer: "+value);return value}overrideValues(replacements){expect(typeof replacements==="object","Replacements must be a dictionary object.");for(const key in replacements){this.data_[key]=replacements[key]}}}function expect(condition,message){if(!condition){throw new Error("Unexpected condition on "+document.location.href+": "+message)}}function expectIsType(id,value,type){expect(typeof value===type,"["+value+"] ("+id+") is not a "+type)}expect(!loadTimeData,"should only include this file once");loadTimeData=new LoadTimeData;window.loadTimeData=loadTimeData;console.warn("crbug/1173575, non-JS module files deprecated.");&lt;/script&gt;<br/>
+  &lt;script jstcache="0"&gt;const pageData = {"details":"Detalles","errorCode":"DNS_PROBE_POSSIBLE","fontfamily":"system-ui, sans-serif","fontfamilyMd":"system-ui, sans-serif","fontsize":"75%","heading":{"hostName":"https","msg":"Vaya… no se puede obtener acceso a esta página"},"hideDetails":"Ocultar detalles","iconClass":"icon-thinking","is_windows_xbox_sku":"false","language":"es","reloadButton":{"msg":"Actualizar","reloadUrl":"https://https//www.alkosto.com/"},"suggestionsDetails":[],"suggestionsSummaryList":[{"summary":"\u003Ca href=\"javascript:diagnoseErrors()\" id=\"diagnose-link\"&gt;Intentar ejecutar Windows Network Diagnostics\u003C/a&gt;."}],"summary":{"failedUrl":"https://https//www.alkosto.com/","hostName":"https","msg":"La \u003Cabbr id=\"dnsDefinition\"&gt;dirección de DNS\u003C/abbr&gt; de \u003Cstrong jscontent=\"hostName\"&gt;\u003C/strong&gt; no se pudo encontrar… diagnosticando el problema ahora."},"textdirection":"ltr","title":"https"};loadTimeData.data = pageData;var tp = document.getElementById('t');jstProcess(new JsEvalContext(pageData), tp);&lt;/script&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
